@@ -26,11 +26,11 @@
 	<div class="row">
 		<div class="large-6 column">
 			<h2>Buy a Cocktail <br />Subscription</h2>
-			<a href="#" class="button">BUY NOW</a>
+			<a href="subscribe.php?s1=cocktails" class="button">BUY NOW</a>
 		</div>
 		<div class="large-6 column">
 			<h2>Buy a Liquor <br />Subscription</h2>
-			<a href="#" class="button">BUY NOW</a>
+			<a href="subscribe.php?s1=liquor" class="button">BUY NOW</a>
 		</div>
 	</div>
 
