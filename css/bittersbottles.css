@@ -1,0 +1,17 @@
+body {
+}
+
+.subscription-choices .button {
+	background: #cccccc;
+	color: #444444;
+}
+
+.subscription-choices h3 {
+	margin:0;
+}
+
+.subscription-choices p {
+	margin:0;
+	line-height: 1em;
+	font-size:.7em;
+}
