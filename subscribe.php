@@ -57,9 +57,9 @@
 				case '6':
 				case '9':
 				case '12':
-					$subscription_enddate = strtotime('today +3 months');
-					echo 'MOOP' . $subscription_enddate;
-					$foxy_sub_enddate = '';
+					$monthend = $subduration - 1; // subtract 1 from the months to get the right month to end in.
+					$subscription_endtimestamp = strtotime("today +$monthend months");
+					$foxy_sub_enddate = date('Ym16', $subscription_endtimestamp);
 				break;		
 				case 'inf':
 			}			
@@ -115,7 +115,7 @@
 						</ul>
 						<div id='whofor' class='<?php echo $subfor=='gift' ? '' : 'hide'; ?>'>
 							<h5>Who is this gift for?</h5>
-							<input type="text" value='<?php echo $shipto; ?>'/>
+							<input type="text" value='Giftee'/>
 						</div>
 					</div>
 				</div>
@@ -188,6 +188,7 @@
 					<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
 					<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
 					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
+					<input type="hidden" name="empty" value="true" />
 					</form>				
 					<a id="subscribe-process" href="#" class='button large expand success'>Buy Subscription</a>
 

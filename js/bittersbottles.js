@@ -55,28 +55,42 @@ bb.subscription = (function() {
 
   }
 
+  function calculate_enddate(sub_duration) {
+    var today = new Date();
+    var d = today.getDate();
+    var m = today.getMonth();
+    var y = today.getFullYear();  
+    var enddate= new Date(y, m+sub_duration, 16);
+    var enddate_string =enddate.getFullYear();
+    enddate_string += ("0" + String(enddate.getMonth()+1)).slice(-2); // to make a 2 digit month string add a 0 and then slice the last 2 characters.
+    enddate_string += "16"; // finish the subscription on the 16th.
+    return enddate_string;
+  }
+
   function update_price() {
     var total_price;
     var product_code = '';
 
-    product_code += subscription_type.toUpperCase();
+    product_code += subscription_type.toUpperCase(); // start the product code
 
     if ($('a#subfreq_monthly').hasClass('picked')) {
       total_price = price_per_month;
       product_code += '-MONTHLY';
       // turn on subscription form values
       $('form#buy-subscription [name=sub_frequency]').val('1m');
-      $('form#buy-subscription [name=sub_startdate]').val('15');
-      $('form#buy-subscription [name=sub_enddate]').val('20131216');   
-
+      $('form#buy-subscription [name=sub_startdate]').val('15'); // start on the 15th of the month
+      
       if ($('a#subduration_3').hasClass('picked')) {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 3 months");
+        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(3));   
         product_code += '-3';
       } else if ($('a#subduration_6').hasClass('picked')) {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 6 months");
+        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(6));   
         product_code += '-6';
       } else if ($('a#subduration_12').hasClass('picked')) {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 12 months");
+        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(12));   
         product_code += '-12';
       } else {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month until you cancel");
@@ -110,15 +124,12 @@ bb.subscription = (function() {
   }
 
   function process() {
-      console.log('Processing order...');
+      //console.log('Processing order...');
+      
       if ($('a#subfor_gift').hasClass('picked')) {
         $('form#buy-subscription [name=shipto]').val($('#whofor input').val());   
       } else {
         $('form#buy-subscription [name=shipto]').val('');           
-      }
-
-      if ($('a#subfreq_monthly').hasClass('picked')) {
-
       }
 
       // submit the form
