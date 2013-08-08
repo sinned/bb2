@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="stylesheets/normalize.css" />
+<link rel="stylesheet" href="stylesheets/app.css">
+<link rel="stylesheet" href="stylesheets/bittersbottles.css">
+
+<script src="js/vendor/custom.modernizr.js"></script>
 
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />

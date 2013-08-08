@@ -21,7 +21,6 @@
 
     // Begin Custom B+B Javascript.
     console.log('hello dennis');
-    bb.subscription.init();
 
   });
 
