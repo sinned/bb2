@@ -3,9 +3,9 @@
 		<div class="large-12 column">
 			<hr />
       <ul class="inline-list">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/faq/">About Us</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/terms/">Terms of Service</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/privacy/">Privacy</a></li>
         <li class="right">Drink wisely.</li>
       <ul>
 		</div>

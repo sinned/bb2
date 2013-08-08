@@ -28,11 +28,11 @@
 						<li class="divider hide-for-small"></li>
 						<li><a href="subscribe.php?subtype=spirits">Buy Spirits</a></li>
 						<li class="divider hide-for-small"></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
 						<li class="divider hide-from-small"</li>
-						<li><a href="#">FAQs</a></li>
+						<li><a href="http://bittersandbottles.wordpress.com/faq/">FAQ</a></li>
 						<li class="divider hide-from-small"</li>
-						<li><a href="#">Contact Us</a></li>
+						<li><a href="http://bittersandbottles.wordpress.com/contact-us/">Contact Us</a></li>
 						<li class="divider hide-from-small"</li>
 					</ul>
 				  </section>
