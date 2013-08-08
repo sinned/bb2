@@ -111,7 +111,7 @@
 			<div class="subscription-choices">
 				<div class="row">
 					<div class="large-2 column">
-						<h4>Step 1</h4>
+						<h4 data-tooltip class="has-tip" title="Who is this for? You? Or a friend? Feel free to order one for every one of your friends.">Step 1</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-2">
@@ -127,7 +127,7 @@
 
 				<div class="row">
 					<div class="large-2 column">
-						<h4>Step 2</h4>
+						<h4 data-tooltip class="has-tip" title="Would you like us to charge you monthly, or would you like to pay up front?">Step 2</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-2">
@@ -139,7 +139,7 @@
 
 				<div class="row">
 					<div class="large-2 column">
-						<h4>Step 3</h4>
+						<h4 data-tooltip class="has-tip" title="How long do you want this subscription to last?">Step 3</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-4">
@@ -153,7 +153,7 @@
 
 				<div class="row">
 					<div class="large-3 column">
-						<h4>Include Starter Kit?</h4>
+						<h4 data-tooltip class="has-tip" title="Are you building your bar from scratch? Our starter kit will get you.. started.">Include Starter Kit?</h4>
 					</div>
 					<div class="large-9 column">
 						<ul class="small-block-grid-2">
@@ -193,7 +193,7 @@
 					<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
 					<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
 					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
-					<input type="hidden" name="empty" value="true" />
+					<!-- <input type="hidden" name="empty" value="true" /> -->
 					</form>				
 					<a id="subscribe-process" href="#" class='button large expand success'>Buy Subscription</a>
 
