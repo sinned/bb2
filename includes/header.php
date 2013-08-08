@@ -18,9 +18,9 @@
 
 				    <!-- Right Nav Section -->
 				    <ul class="right">
-						<li><a href="subscribe.php?s1=cocktails">Buy Cocktails</a></li>
+						<li><a href="subscribe.php?subtype=cocktails">Buy Cocktails</a></li>
 						<li class="divider hide-for-small"></li>
-						<li><a href="subscribe.php?s1=liquor">Buy Liquor</a></li>
+						<li><a href="subscribe.php?subtype=liquor">Buy Liquor</a></li>
 						<li class="divider hide-for-small"></li>
 						<li><a href="#">About</a></li>
 						<li class="divider hide-form-small"></li>
@@ -28,7 +28,9 @@
 						<li class="divider hide-from-small"</li>
 						<li><a href="#">FAQs</a></li>
 						<li class="divider hide-from-small"</li>
-				    </ul>
+						<li><a href="#">Contact Us</a></li>
+						<li class="divider hide-from-small"</li>
+					</ul>
 				  </section>
 				</nav>		
 			</div>

@@ -13,6 +13,8 @@
   
   <script src="js/vendor/custom.modernizr.js"></script>
 
+  <?php include "includes/scripts.php"; ?>
+
 </head>
 <body>
 	<?php include "includes/header.php"; ?>
@@ -24,13 +26,13 @@
 	</div>
 
 	<div class="row">
-		<div class="large-6 column">
+		<div class="large-6 small-6 column">
 			<h2>Buy a Cocktail <br />Subscription</h2>
-			<a href="subscribe.php?s1=cocktails" class="button">BUY NOW</a>
+			<a href="subscribe.php?subtype=cocktails" class="button">BUY NOW</a>
 		</div>
-		<div class="large-6 column">
+		<div class="large-6 small-6 column">
 			<h2>Buy a Liquor <br />Subscription</h2>
-			<a href="subscribe.php?s1=liquor" class="button">BUY NOW</a>
+			<a href="subscribe.php?subtype=liquor" class="button">BUY NOW</a>
 		</div>
 	</div>
 
