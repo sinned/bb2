@@ -31,8 +31,8 @@
 			<a href="subscribe.php?subtype=cocktails" class="button">BUY NOW</a>
 		</div>
 		<div class="large-6 small-6 column">
-			<h2>Buy a Liquor <br />Subscription</h2>
-			<a href="subscribe.php?subtype=liquor" class="button">BUY NOW</a>
+			<h2>Buy a Spirits <br />Subscription</h2>
+			<a href="subscribe.php?subtype=spirits" class="button">BUY NOW</a>
 		</div>
 	</div>
 

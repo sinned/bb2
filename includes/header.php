@@ -20,7 +20,7 @@
 				    <ul class="right">
 						<li><a href="subscribe.php?subtype=cocktails">Buy Cocktails</a></li>
 						<li class="divider hide-for-small"></li>
-						<li><a href="subscribe.php?subtype=liquor">Buy Liquor</a></li>
+						<li><a href="subscribe.php?subtype=spirits">Buy Spirits</a></li>
 						<li class="divider hide-for-small"></li>
 						<li><a href="#">About</a></li>
 						<li class="divider hide-form-small"></li>
