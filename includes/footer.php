@@ -2,7 +2,12 @@
 	<div class="row">
 		<div class="large-12 column">
 			<hr />
-			<p>Footer stuff</p>
+      <ul class="inline-list">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li class="right">Drink wisely.</li>
+      <ul>
 		</div>
 	</div>
 
