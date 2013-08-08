@@ -1,0 +1,16 @@
+/* line 4, ../sass/bittersbottles.scss */
+.subscription-choices .picked {
+  border: 4px solid red;
+}
+
+/* line 11, ../sass/bittersbottles.scss */
+.subscription-choices h3 {
+  margin: 0;
+}
+
+/* line 15, ../sass/bittersbottles.scss */
+.subscription-choices p {
+  margin: 0;
+  line-height: 1em;
+  font-size: .7em;
+}
