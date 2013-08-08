@@ -1,13 +1,14 @@
 body {
 }
 
-.subscription-choices .button {
-	background: #cccccc;
-	color: #444444;
+.subscription-choices a {
 }
 
 .subscription-choices .picked {
-	background: red;
+	border: 4px solid red;
+}
+
+.subscription-choices .disabled {
 }
 
 .subscription-choices h3 {

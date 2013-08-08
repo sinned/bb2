@@ -23,7 +23,7 @@
 	$shipto       = !empty($_REQUEST['shipto']) ? strtolower($_REQUEST['shipto']) : ''; // who this subscription is for
 	$subfreq       = !empty($_REQUEST['subfreq']) ? strtolower($_REQUEST['subfreq']) : 'monthly'; // how often to bill
 	$subduration       = !empty($_REQUEST['subduration']) ? strtolower($_REQUEST['subduration']) : '12'; // how long to subscribe for
-	$substart       = !empty($_REQUEST['substart']) ? strtolower($_REQUEST['substart']) : 'starter'; // starter or not
+	$substart       = !empty($_REQUEST['substart']) ? strtolower($_REQUEST['substart']) : 'yes'; // starter or not
 
 	// init
 	$price_per_month = 0;
@@ -67,8 +67,7 @@
 
 	// set the foxycart shipto value
 	$foxy_shipto = $subfor == 'gift' ? $shipto : '';
-
-	$foxy_product_code = strtoupper($subtype) . '-SUB-' . strtoupper($subduration);
+	$foxy_product_code = strtoupper($subtype) . '-' . strtoupper($subfreq) . '-' . strtoupper($subduration);
 
 
 ?><!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
@@ -84,6 +83,12 @@
   
   <script src="js/vendor/custom.modernizr.js"></script>
   <?php include "includes/scripts.php"; ?>
+
+  <script type="text/javascript">
+  	var price_per_month = <?php echo $price_per_month; ?>;
+  	var subscription_type = '<?php echo $subtype; ?>';
+  	var product_code = '<?php echo $foxy_product_code; ?>';
+  </script>
 </head>
 <body>
 	<?php include "includes/header.php"; ?>
@@ -136,18 +141,18 @@
 							<li><a id='subduration_3' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $subduration=='3' ? 'picked' : ''; ?>">3 Months</a></li>
 							<li><a id='subduration_6' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=6&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $subduration=='6' ? 'picked' : ''; ?>">6 Months</a></li>
 							<li><a id='subduration_12' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=12&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $subduration=='12' ? 'picked' : ''; ?>">12 Months</a></li>
-							<li><a id='subduration_inf' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=inf&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $subduration=='inf' ? 'picked' : ''; ?>">∞</a></li>
+							<li><a id='subduration_inf' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=inf&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $subduration=='inf' ? 'picked' : ''; ?> <?php echo $subfreq=='once' ? 'disabled' : ''; ?>">∞</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="large-2 column">
-						<h4>Step 4</h4>
+					<div class="large-3 column">
+						<h4>Include Starter Kit?</h4>
 					</div>
-					<div class="large-10 column">
+					<div class="large-9 column">
 						<ul class="small-block-grid-2">
-							<li><a id='substart_starter' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=starter&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $substart=='starter' ? 'picked' : ''; ?>">Starter</a></li>
+							<li><a id='substart_yes' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">Yes</a></li>
 							<li><a id='substart_no' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="large button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">No</a></li>
 						</ul>
 					</div>
@@ -156,47 +161,35 @@
 
 			<div class="row">
 				<div class="large-2 column">
+					<h3>Price:</h3>
 				</div>
-				<div class="small-12 large-10 column">
-					<h3>Price:
+				<div class="small-12 large-10 column price_description">
+					<h3 id='price_desc'>
 					<?php if ($subfreq == 'once') { ?>
 						$<?php echo number_format($foxy_price,2); ?>
 					<?php } else { ?>
 						$<?php echo number_format($price_per_month,2); ?> / month <?php echo $subduration == 'inf' ? 'until you cancel' : 'for ' .$subduration. ' months'; ?> 
 					<?php } ?>
 					</h3>
+					<h3 id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
+						$20 for the starter kit
+					</h3>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="large-12 column">
-
-					<?php
-						if (validate_subscription_choices($subtype, $subfor, $subfreq, $subduration, $substart)) {
-					?>
 					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">
 					<input type="hidden" name="name" value="<?php echo $product_name; ?>" />
 					<input type="hidden" name="category" value="SUBSCRIPTION" />
 					<input type="hidden" name="price" value="<?php echo $foxy_price; ?>" />
 					<input type="hidden" name="code" value="<?php echo $foxy_product_code; ?>" />
-
-					<?php if ($subfreq == 'monthly') { ?>
 					<input type="hidden" name="sub_frequency" value="<?php echo $foxy_subscription_frequency; ?>" />
 					<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
 					<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
-					<?php } ?>
-
 					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
-
-					<input type="submit" name="Buy Subscription" value="Buy Subscription" class="expand large button success submit" />
 					</form>				
-					<?php
-						} else {
-					?>
-					<button class="button large expand disabled">Buy Subscription</button>
-					<?php
-						}
-					?>			
+					<a id="subscribe-process" href="#" class='button large expand success'>Buy Subscription</a>
 
 				</div>	
 			</div>

@@ -18,6 +18,12 @@
 
 				    <!-- Right Nav Section -->
 				    <ul class="right">
+						<li><a id="fc_minicart" href="https://bittersandbottles.foxycart.com/cart?cart=view">
+							<span id="fc_quantity">0</span>
+							<span id="fc_singular"> item </span>
+							<span id="fc_plural"> items </span> in cart
+						</a></li>					
+						<li class="divider hide-for-small"></li>    	
 						<li><a href="subscribe.php?subtype=cocktails">Buy Cocktails</a></li>
 						<li class="divider hide-for-small"></li>
 						<li><a href="subscribe.php?subtype=spirits">Buy Spirits</a></li>
