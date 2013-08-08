@@ -31,6 +31,9 @@ bb.subscription = (function() {
     });
     $('a#subfreq_once').click(function(e) {
       $('a#subduration_inf').addClass('disabled');
+      if ($('a#subduration_inf').hasClass('picked')) {
+        $('a#subduration_12').click();
+      }
     });
 
     $('a#substart_yes').click(function(e) {

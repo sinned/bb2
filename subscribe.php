@@ -115,7 +115,7 @@
 							<li><a id='subfor_gift' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=gift&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large button expand  <?php echo $subfor=='gift' ? 'picked' : ''; ?>">This is a Gift </a></li>
 						</ul>
 						<div id='whofor' class='<?php echo $subfor=='gift' ? '' : 'hide'; ?>'>
-							<h5>Who is this gift for?</h5>
+							<h5>What is the name of the recipient?</h5>
 							<input type="text" value='Giftee'/>
 						</div>
 					</div>
