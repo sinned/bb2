@@ -22,9 +22,11 @@
 	<?php include "includes/header.php"; ?>
 
 	<div class="row">
-		<div class="large-12 column">
-			^^cart^^
+		<div class="large-8 column">
 			^^checkout^^
+		</div>
+		<div class="large-4 column">
+			^^cart^^
 		</div>
 	</div>
 
