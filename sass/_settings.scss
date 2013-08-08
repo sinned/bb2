@@ -24,8 +24,9 @@ $em-base: 16px !default;
 //// Various global styles
 
 // $body-bg: #fff;
-// $body-font-color: #222;
+$body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -39,10 +40,10 @@ $em-base: 16px !default;
 
 //// Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: #00A8C6;
+$secondary-color: #e9e9e9;
+$alert-color: #CC333F;
+$success-color: #8FBE00;
 
 //// Make sure border radius matches unless we want it different.
 
@@ -114,11 +115,11 @@ $em-base: 16px !default;
 
 //// Heading font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
-// $header-line-height: 1.4;
+$header-line-height: 1.0;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
@@ -165,7 +166,7 @@ $em-base: 16px !default;
 //// Anchors
 
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $primary-color;
 // $anchor-font-color-hover: darken($primary-color, 5%);
 
 //// <hr> element
