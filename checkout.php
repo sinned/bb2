@@ -17,23 +17,15 @@
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
 
-
 </head>
 <body>
 	<?php include "includes/header.php"; ?>
-
 	<div class="row">
 		<div class="large-12 column">
 			^^cart^^
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-12 column">
 			^^checkout^^
 		</div>
 	</div>
-
-
 	<?php include "includes/footer.php"; ?>
 </body>
 </html>
