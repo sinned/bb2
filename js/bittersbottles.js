@@ -47,6 +47,11 @@ bb.subscription = (function() {
     });    
   }
 
+  function capitaliseFirstLetter(string)
+  {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   function update_product_code() {
     var product_code = '';
     product_code += subscription_type.toUpperCase();
@@ -70,6 +75,8 @@ bb.subscription = (function() {
   function update_price() {
     var total_price;
     var product_code = '';
+    var months_paid;
+    var product_name;
 
     product_code += subscription_type.toUpperCase(); // start the product code
 
@@ -81,33 +88,41 @@ bb.subscription = (function() {
       $('form#buy-subscription [name=sub_startdate]').val('15'); // start on the 15th of the month
       
       if ($('a#subduration_3').hasClass('picked')) {
-        $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 3 months");
-        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(3));   
-        product_code += '-3';
+        months_paid = 3;
       } else if ($('a#subduration_6').hasClass('picked')) {
-        $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 6 months");
-        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(6));   
-        product_code += '-6';
+        months_paid = 6;
       } else if ($('a#subduration_12').hasClass('picked')) {
-        $('#price_desc').html("$" + total_price.toFixed(2) + " / month for 12 months");
-        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(12));   
-        product_code += '-12';
+        months_paid = 12;
       } else {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month until you cancel");
         product_code += '-INF';
+        months_paid = 0;
+        product_name = 'Monthly ' +capitaliseFirstLetter(subscription_type)+ ' Subscription';
+        $('form#buy-subscription [name=sub_enddate]').val('');
       }   
+
+      if (months_paid > 0) {
+        $('#price_desc').html("$" + total_price.toFixed(2) + " / month for " +months_paid+ " months");
+        $('form#buy-subscription [name=sub_enddate]').val(calculate_enddate(months_paid));   
+        product_code += '-' +months_paid;        
+        product_name = 'Monthly ' +capitaliseFirstLetter(subscription_type)+ ' Subscription, ' +months_paid+ ' months';
+      }
+
+      $('form#buy-subscription [name=name]').val(product_name);
+
     } else {
       product_code += '-ONCE';
       if ($('a#subduration_3').hasClass('picked')) {
-        total_price = price_per_month * 3;
-        product_code += '-3';
+        months_paid = 3;
       } else if ($('a#subduration_6').hasClass('picked')) {
-        total_price = price_per_month * 6;
-        product_code += '-6';
+        months_paid = 6;
       } else if ($('a#subduration_12').hasClass('picked')) {
-        total_price = price_per_month * 12;
-        product_code += '-12';
+        months_paid = 12;
       }
+
+      total_price = price_per_month * months_paid;
+      product_code += '-' + months_paid;
+      $('form#buy-subscription [name=name]').val('Prepaid ' +capitaliseFirstLetter(subscription_type)+ ' Subscription, ' +months_paid+ ' months');
       $('#price_desc').html("$" + total_price.toFixed(2));        
 
       // turn off subscription form values

@@ -34,11 +34,12 @@
 
 	switch ($subtype) {
 		case 'cocktails':
-			$product_name = "Cocktails Subscription";
+
+			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 100;
 		break;
 		case 'spirits':
-			$product_name = "Spirits Subscription";
+			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 		break;
 	}
