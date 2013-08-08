@@ -83,17 +83,16 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Buy Cocktails: Bitters+Bottles</title>
-
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/bittersbottles.css">
-  
-  <script src="js/vendor/custom.modernizr.js"></script>
   <?php include "includes/scripts.php"; ?>
 
   <script type="text/javascript">
   	var price_per_month = <?php echo $price_per_month; ?>;
   	var subscription_type = '<?php echo $subtype; ?>';
   	var product_code = '<?php echo $foxy_product_code; ?>';
+	$(document).ready(function() {
+  	    bb.subscription.init();
+  	});
+
   </script>
 </head>
 <body>

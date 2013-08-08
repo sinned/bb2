@@ -6,13 +6,6 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Bitters+Bottles</title>
-
-  
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/bittersbottles.css">
-  
-  <script src="js/vendor/custom.modernizr.js"></script>
-
   <?php include "includes/scripts.php"; ?>
 
 </head>
@@ -27,11 +20,13 @@
 
 	<div class="row">
 		<div class="large-6 small-6 column">
-			<h2>Buy a Cocktail <br />Subscription</h2>
+			<h2><a href="subscribe.php?subtype=cocktails">Cocktails <br />Subscription</a></h2>
+			<p>Marketing text goes here</p>
 			<a href="subscribe.php?subtype=cocktails" class="button">BUY NOW</a>
 		</div>
 		<div class="large-6 small-6 column">
-			<h2>Buy a Spirits <br />Subscription</h2>
+			<h2><a href="subscribe.php?subtype=spirits">Spirits <br />Subscription</a></h2>
+			<p>Marketing text goes here</p>
 			<a href="subscribe.php?subtype=spirits" class="button">BUY NOW</a>
 		</div>
 	</div>
