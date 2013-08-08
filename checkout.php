@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Bitters+Bottles</title>
+<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="stylesheets/normalize.css" />
 <link rel="stylesheet" href="stylesheets/app.css">
 <link rel="stylesheet" href="stylesheets/bittersbottles.css">
@@ -22,13 +23,16 @@
 	<?php include "includes/header.php"; ?>
 
 	<div class="row">
-		<div class="large-8 column">
-			^^checkout^^
-		</div>
-		<div class="large-4 column">
+		<div class="large-12 column">
 			^^cart^^
 		</div>
 	</div>
+	<div class="row">
+		<div class="large-12 column">
+			^^checkout^^
+		</div>
+	</div>
+
 
 	<?php include "includes/footer.php"; ?>
 </body>
