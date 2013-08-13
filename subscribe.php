@@ -177,7 +177,7 @@
 					<?php } ?>
 					</h3>
 					<h3 id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
-						$20 for the starter kit
+						$20 for the barware caboodle
 					</h3>
 				</div>
 			</div>
