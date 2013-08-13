@@ -82,7 +82,7 @@
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Buy Cocktails: Bitters+Bottles</title>
+  <title>Buy <?php echo $product_title; ?>: Bitters+Bottles</title>
   <?php include "includes/scripts.php"; ?>
 
   <script type="text/javascript">
