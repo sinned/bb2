@@ -1,6 +1,6 @@
 	<div class="row">
 		<div class="large-12 column">
-			<div class="contain-to-grid">
+			<div class="contain-to-grid fixed">
 				<nav class="top-bar">
 				  <ul class="title-area">
 				    <!-- Title Area -->
@@ -18,9 +18,9 @@
 							<span id="fc_plural"> items </span> in cart
 						</a></li>					
 						<li class="divider"></li>    	
-						<li><a href="subscribe.php?subtype=cocktails">Buy Cocktails</a></li>
+						<li><a href="subscribe.php?subtype=cocktails">Cocktails</a></li>
 						<li class="divider"></li>    	
-						<li><a href="subscribe.php?subtype=spirits">Buy Spirits</a></li>
+						<li><a href="subscribe.php?subtype=spirits">Spirits</a></li>
 						<li class="divider"></li>    	
 						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
 						<li class="divider"></li>    	

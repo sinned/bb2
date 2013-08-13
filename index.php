@@ -31,12 +31,25 @@
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
-			<h2><a href="subscribe.php?subtype=cocktails">Cocktails <br />Subscription</a></h2>
-			<p>Marketing text goes here. Blah blah blah.</p>
+			<h2><a href="subscribe.php?subtype=cocktails">Mix Cocktails</a></h2>
+			<p>I like the balance of a well made drink.  To me a cocktail is more than the sum of its parts.</p>
 		</div>
 		<div class="large-6 small-6 column card">
-			<h2><a href="subscribe.php?subtype=spirits">Spirits <br />Subscription</a></h2>
-			<p>Marketing text goes here</p>
+			<h2><a href="subscribe.php?subtype=spirits">Discover Spirits</a></h2>
+			<p>I like a spirit with a lot of character.  My drinks come neat or on the rocks.</p>
+		</div>
+	</div>
+
+	<div class="row hide-for-small">
+		<div class="large-12 column">
+			<hr />
+		</div>
+	</div>	
+
+	<div class="row">
+		<div class="large-12 column hide-for-small text-center">
+			<h6>The bar you need for the drinks you love</h6>
+			<iframe src="http://snapwidget.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MjAwfDN8MXx8eWVzfDV8bm9uZXxvblN0YXJ0" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:645px; height: 215px" ></iframe>
 		</div>
 	</div>
 

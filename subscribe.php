@@ -34,15 +34,15 @@
 
 	switch ($subtype) {
 		case 'cocktails':
-			$product_title = "Cocktails Subscription";
-			$product_description = "Cocktails are the best!";
+			$product_title = "Cocktail Subscription";
+			$product_description = "Build your home bar<br />Receive monthly deliveries with the bottled ingredients for 4 classic cocktails<br />Master the recipes to take you from grasshopper to sensei";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 100;
 		break;
 		case 'spirits':
 			$product_title = "Spirits Subscription";	
-			$product_description = "Spirits are the best!";
+			$product_description = "Build your home bar<br />Receive, sip, and discover a rare spirit every month<br />Let us be your spirit guide";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
@@ -111,7 +111,7 @@
 			<div class="subscription-choices">
 				<div class="row">
 					<div class="large-2 column">
-						<h4 data-tooltip class="has-tip" title="Who is this for? You? Or a friend? Feel free to order one for every one of your friends.">Step 1</h4>
+						<h4 data-tooltip class="has-tip" title="Who is this for? You, a friend, everyone you know? You can order as many subscriptions as you like.">Step 1</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-2">
@@ -127,7 +127,7 @@
 
 				<div class="row">
 					<div class="large-2 column">
-						<h4 data-tooltip class="has-tip" title="Would you like us to charge you monthly, or would you like to pay up front?">Step 2</h4>
+						<h4 data-tooltip class="has-tip" title="How would you like to pay? You can pay monthly for each delivery or you can pay once up front.">Step 2</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-2">
@@ -139,7 +139,7 @@
 
 				<div class="row">
 					<div class="large-2 column">
-						<h4 data-tooltip class="has-tip" title="How long do you want this subscription to last?">Step 3</h4>
+						<h4 data-tooltip class="has-tip" title="How long do you want this subscription to last? Forever seems like a great choice.">Step 3</h4>
 					</div>
 					<div class="large-10 column">
 						<ul class="small-block-grid-4">
@@ -153,7 +153,7 @@
 
 				<div class="row">
 					<div class="large-3 column">
-						<h4 data-tooltip class="has-tip" title="Are you building your bar from scratch? Our starter kit will get you.. started.">Include Starter Kit?</h4>
+						<h4 data-tooltip class="has-tip" title="Are you equipped for the road ahead? Let us help you get started with the right bar tools in your first shipment.">Include Barware Caboodle?</h4>
 					</div>
 					<div class="large-9 column">
 						<ul class="small-block-grid-2">

@@ -16,17 +16,33 @@
 }
 
 /* line 24, ../sass/bittersbottles.scss */
+.top-bar .name h1 a {
+  padding: 0;
+}
+
+/* line 28, ../sass/bittersbottles.scss */
+.top-bar .name h1 a:hover {
+  background: #fff;
+  color: #999;
+}
+
+/* line 33, ../sass/bittersbottles.scss */
 .top-bar li {
   text-transform: uppercase;
 }
 
-/* line 28, ../sass/bittersbottles.scss */
+/* line 37, ../sass/bittersbottles.scss */
 .top-bar li a:hover {
   color: #eee;
   background: #333;
 }
 
-/* line 33, ../sass/bittersbottles.scss */
+/* line 42, ../sass/bittersbottles.scss */
 a.button:hover {
   background: #f95951;
+}
+
+/* line 52, ../sass/bittersbottles.scss */
+h4.has-tip {
+  text-transform: uppercase;
 }
