@@ -17,7 +17,155 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
-
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+	// Country/State Helper Functions v1.1
+	// Do not modify the following functions
+ 
+	FC.locations.removeCountries = function(countries, locationArrayNames) {
+		if (typeof countries == "undefined") { return false }
+		if (typeof countries == "string") { countries = [countries]; }
+		locationArrayNames = FC.locations.validateLocationArrayNames(locationArrayNames);
+ 
+		for (l in locationArrayNames) {
+			var locationArray = FC.locations.getLocationArray(locationArrayNames[l]);
+			for (var c in countries) {
+				if (typeof locationArray[countries[c]] == "undefined") { break; }
+				delete locationArray[countries[c]];
+			}
+		}
+ 
+		return true;
+	}
+ 
+	FC.locations.limitCountriesTo = function(countries, locationArrayNames) {
+		if (typeof countries == "undefined") { return false }
+		if (typeof countries == "string") { countries = [countries]; }
+		locationArrayNames = FC.locations.validateLocationArrayNames(locationArrayNames);
+ 
+		for (l in locationArrayNames) {
+			var newLocations = {};
+			var locationArray = FC.locations.getLocationArray(locationArrayNames[l]);
+			for (var c in countries) {
+				if (typeof locationArray[countries[c]] == "undefined") { break; }
+				newLocations[countries[c]] = locationArray[countries[c]];
+			}
+ 
+			// Prevent the countries being set to nothing
+			if (newLocations == {}) { return false; }
+ 
+			if (locationArrayNames[l] == "customer") {
+				FC.locations.config.locations = newLocations;
+			} else {
+				FC.locations.config.shippingLocations = newLocations;
+			}
+		}
+		return true;
+	}
+ 
+	FC.locations.removeStates = function(country, states, locationArrayNames) {
+		if (typeof country == "undefined" || typeof states == "undefined") { return false }
+		if (typeof states == "string") { states = [states]; }
+		locationArrayNames = FC.locations.validateLocationArrayNames(locationArrayNames);
+ 
+		for (l in locationArrayNames) {
+			var locationArray = FC.locations.getLocationArray(locationArrayNames[l]);
+			if (typeof locationArray[country] == "undefined") { return false; }
+			for (var s in states) {
+				if (typeof locationArray[country].r[states[s]] == "undefined") { break; }
+				delete locationArray[country].r[states[s]];
+			}
+		}
+		return true;
+	}
+ 
+	FC.locations.limitStatesTo = function(country, states, locationArrayNames) {
+		if (typeof country == "undefined" || typeof states == "undefined") { return false }
+		if (typeof states == "string") { states = [states]; }
+		locationArrayNames = FC.locations.validateLocationArrayNames(locationArrayNames);
+ 
+		for (l in locationArrayNames) {
+			var newLocations = {};
+			var locationArray = FC.locations.getLocationArray(locationArrayNames[l]);
+			if (typeof locationArray[country] == "undefined") { return false; }
+			for (var s in states) {
+				if (typeof locationArray[country].r[states[s]] == "undefined") { break; }
+				newLocations[states[s]] = locationArray[country].r[states[s]];
+			}
+ 
+			if (locationArrayNames[l] == "customer") {
+				FC.locations.config.locations[country].r = newLocations;
+			} else {
+				FC.locations.config.shippingLocations[country].r = newLocations;
+			}
+		}
+		return true;
+	}
+ 
+	FC.locations.updateFoxyComplete = function(blockErrors) {
+		FC.checkout.config.evaluateAjaxRequests = false;
+ 
+		FC.checkout.setAutoComplete("customer_country");
+		if (jQuery("#customer_country_name") != "") {
+			FC.checkout.validateLocationName("customer_country");
+		}
+		if (jQuery("#customer_state_name").val() != "") {
+			FC.checkout.validateLocationName("customer_state");
+		}
+		if (blockErrors) {
+			FC.checkout.updateErrorDisplay("customer_country_name", false);
+			FC.checkout.updateErrorDisplay("customer_state_name", false);
+		}
+		if (!FC.checkout.config.hasMultiship) {
+			FC.checkout.setAutoComplete("shipping_country");
+			if (jQuery("#shipping_country_name") != "") {
+				FC.checkout.validateLocationName("shipping_country");
+			}
+			if (jQuery("#shipping_state_name") != "") {
+				FC.checkout.validateLocationName("shipping_state");
+			}
+			if (blockErrors) {
+				FC.checkout.updateErrorDisplay("shipping_country_name", false);
+				FC.checkout.updateErrorDisplay("shipping_state_name", false);
+			}
+ 
+			FC.checkout.config.evaluateAjaxRequests = true;
+			FC.checkout.updateShipping(-1);
+			FC.checkout.updateTaxes(-1);
+		} else {
+			for (var i = 0; i < FC.checkout.config.multishipDetails.length; i++) {
+				FC.checkout.setAutoComplete("shipto_" + i + "_country");
+				if (jQuery("#shipto_" + i + "_country_name") != "") {
+					FC.checkout.validateLocationName("shipto_" + i + "_country");
+				}
+				if (jQuery("#shipto_" + i + "_state_name") != "") {
+					FC.checkout.validateLocationName("shipto_" + i + "_state");
+				}
+				if (blockErrors) {
+					FC.checkout.updateErrorDisplay("shipto_" + i + "_country_name", false);
+					FC.checkout.updateErrorDisplay("shipto_" + i + "_state_name", false);
+				}
+			}
+ 
+			FC.checkout.config.evaluateAjaxRequests = true;
+			for (var i = 0; i < FC.checkout.config.multishipDetails.length; i++) {
+				FC.checkout.updateShipping(i);
+				FC.checkout.updateTaxes(i);
+			}
+		}
+	}
+ 
+	FC.locations.getLocationArray = function(locationArrayNames) {
+		return (locationArrayNames == "customer") ? FC.locations.config.locations : FC.locations.config.shippingLocations;
+	}
+ 
+	FC.locations.validateLocationArrayNames = function(locationArrayNames) {
+		if (typeof locationArrayNames == "undefined" || locationArrayNames == "" || locationArrayNames == "both") { locationArrayNames = ["customer", "shipping"]; }
+		if (typeof locationArrayNames == "string") { locationArrayNames = [locationArrayNames]; }
+		return locationArrayNames;
+	}
+	//]]>
+</script>
 <script type="text/javascript" charset="utf-8">
   //<![CDATA[
  
@@ -172,24 +320,6 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
   <!-- <script src="js/vendor/zepto.js"></script>  -->
   <script src="js/foundation.min.js"></script>
 
-  <!--
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.topbar.js"></script>
-    <script src="js/foundation/foundation.orbit.js"></script>    
-    <script src="js/foundation/foundation.alerts.js"></script>
-    <script src="js/foundation/foundation.clearing.js"></script>
-    <script src="js/foundation/foundation.cookie.js"></script>
-    <script src="js/foundation/foundation.dropdown.js"></script>
-    <script src="js/foundation/foundation.forms.js"></script>
-    <script src="js/foundation/foundation.joyride.js"></script>
-    <script src="js/foundation/foundation.magellan.js"></script>
-    <script src="js/foundation/foundation.reveal.js"></script>
-    <script src="js/foundation/foundation.section.js"></script>
-    <script src="js/foundation/foundation.tooltips.js"></script>
-    <script src="js/foundation/foundation.interchange.js"></script>
-    <script src="js/foundation/foundation.placeholder.js"></script>
-    <script src="js/foundation/foundation.abide.js"></script>
-  -->
   
   <script>
     $(document).foundation();
