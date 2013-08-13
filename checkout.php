@@ -17,6 +17,44 @@
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
 
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  var shippingCountry = "US";
+  var includeShippingStates = ["NY", "CA"];
+  cIndex = -1;
+  var newRegions = [];
+  for (var i = 0; i < FC.locations.config.locations.length; i++) {
+    if (FC.locations.config.locations[i].cc2 == shippingCountry) {
+      cIndex = i;
+    }
+  }
+  if (cIndex != -1) {
+    for (var i = 0; i < FC.locations.config.locations[cIndex].r.length; i++) {
+      for (var s = 0; s < includeShippingStates.length; s++) {
+        if (FC.locations.config.locations[cIndex].r[i].c == includeShippingStates[s]) {
+          newRegions.push(FC.locations.config.locations[cIndex].r[i]);
+        }
+      }
+    }
+
+    // Just update the shipping locations
+    FC.locations.config.shippingLocations[cIndex].r = newRegions;
+
+    // Set shipping country to the US
+    jQuery('#shipping_country').val('US');
+    jQuery('#shipping_country_name').val('United States');
+    jQuery('#shipping_country_name').attr('readonly', true).focus(function() {
+      this.blur();
+    });
+
+    FC.checkout.setAutoComplete("shipping_state");
+
+    // Require the shipping address be set as billing can be from anywhere.
+    FC.checkout.requireShippingAddress();
+  }
+});
+</script>
+
 <script type="text/javascript" charset="utf-8">
   //<![CDATA[
  
@@ -28,7 +66,8 @@
  
   function customShippingLogic() {
     /* BEGIN CUSTOM SHIPPING LOGIC */
-  	addShippingOption(1, 0, '', 'Local Pickup');
+  	addShippingOption(1, 0, '', 'Shipped via USPS/UPS');
+  	addShippingOption(2, 0, '', 'Local Pickup');
     /* END CUSTOM SHIPPING LOGIC */
   }
  
