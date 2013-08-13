@@ -11,12 +11,7 @@
 		</div>
 	</div>
 
-<script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
+  <script src="js/vendor/zepto.js"></script>  
   <script src="js/foundation.min.js"></script>
 
   <!--
