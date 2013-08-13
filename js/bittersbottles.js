@@ -155,7 +155,7 @@ bb.subscription = (function() {
       // add the barware caboodle if it's selected.
       if ($('a#substart_yes').hasClass('picked')) {
         // get the URL https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto=bob&category=DEFAULT&code=CABOODLE
-        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto='+whofor+'&category=DEFAULT&code=CABOODLE' +fcc.session_get()+'&output=json&callback=?';
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-CABOODLE' +fcc.session_get()+'&output=json&callback=?';
         $.getJSON(carturl, function(data) {
           // callback function goes here
         });
