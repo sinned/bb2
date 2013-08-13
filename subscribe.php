@@ -142,7 +142,7 @@
 						<h4 data-tooltip class="has-tip" title="How long do you want this subscription to last? Forever seems like a great choice.">Step 3</h4>
 					</div>
 					<div class="large-10 column">
-						<ul class="small-block-grid-4">
+						<ul class="small-block-grid-4 months">
 							<li><a id='subduration_3' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large secondary button expand <?php echo $subduration=='3' ? 'picked' : ''; ?>">3 Months</a></li>
 							<li><a id='subduration_6' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=6&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large secondary button expand <?php echo $subduration=='6' ? 'picked' : ''; ?>">6 Months</a></li>
 							<li><a id='subduration_12' href="subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=12&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="large secondary button expand <?php echo $subduration=='12' ? 'picked' : ''; ?>">12 Months</a></li>
@@ -195,13 +195,13 @@
 					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
 					<!-- <input type="hidden" name="empty" value="true" /> -->
 					</form>				
-					<a id="subscribe-process" href="#" class='button large expand success'>Buy Subscription</a>
+					<a id="subscribe-process" href="#" class='button large expand'>Buy Subscription</a>
 
 				</div>	
 			</div>
 		</div>
 		<div class="large-4 hide-for-small column">
-			<h5 style='background:#eee;height:100%;text-align:center;'>IMAGE HERE</h5>
+			<h5 class='sidebar-<?php echo $subtype; ?>'></h5>
 		</div>
 	</div>	
 

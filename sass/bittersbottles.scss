@@ -21,6 +21,11 @@
 	font-size:.7em;
 }
 
+.subscription-choices li a { min-height: 100px;}
+
+a#subscribe-process { background: #333; }
+a#subscribe-process:hover { background: #444; }
+
 .top-bar .name h1 a {
 }
 
@@ -52,3 +57,12 @@ h4.has-tip {
 	text-transform: uppercase;
 }
 
+.sidebar-cocktails {
+	height: 100%;
+	background: url('../img/cocktails.jpg');
+}
+
+.sidebar-spirits {
+	height: 100%;
+	background: url('../img/spirits.jpg');
+}

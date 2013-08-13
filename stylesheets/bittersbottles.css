@@ -1,43 +1,44 @@
-/* line 7, ../sass/bittersbottles.scss */
 .subscription-choices .picked {
-  border: 4px solid #CC333F;
-}
+  border: 4px solid #CC333F; }
 
-/* line 14, ../sass/bittersbottles.scss */
 .subscription-choices h3 {
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 18, ../sass/bittersbottles.scss */
 .subscription-choices p {
   margin: 0;
   line-height: 1em;
-  font-size: .7em;
-}
+  font-size: .7em; }
 
-/* line 27, ../sass/bittersbottles.scss */
+.subscription-choices li a {
+  min-height: 100px; }
+
+a#subscribe-process {
+  background: #333; }
+
+a#subscribe-process:hover {
+  background: #444; }
+
 .top-bar .name h1 a:hover {
   background: #fff;
-  color: #999;
-}
+  color: #999; }
 
-/* line 32, ../sass/bittersbottles.scss */
 .top-bar li {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-/* line 36, ../sass/bittersbottles.scss */
 .top-bar li a:hover {
   color: #eee;
-  background: #333;
-}
+  background: #333; }
 
-/* line 41, ../sass/bittersbottles.scss */
 a.button:hover {
-  background: #f95951;
-}
+  background: #f95951; }
 
-/* line 51, ../sass/bittersbottles.scss */
 h4.has-tip {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
+
+.sidebar-cocktails {
+  height: 100%;
+  background: url("../img/cocktails.jpg"); }
+
+.sidebar-spirits {
+  height: 100%;
+  background: url("../img/spirits.jpg"); }

@@ -19,9 +19,9 @@
 // @import "foundation/components/dropdown-buttons"; // *requires components/buttons
 // @import "foundation/components/split-buttons"; // *requires components/buttons
 // @import "foundation/components/flex-video";
-@import "foundation/components/section";
+// @import "foundation/components/section";
 @import "foundation/components/top-bar";  // *requires components/grid
-//@import "foundation/components/orbit"; // for some reason, this does NOT work, so I had to hack in orbit.css myself. odd.
+// @import "foundation/components/orbit"; // for some reason, this does NOT work, so I had to hack in orbit.css myself. odd.
 @import "foundation/components/reveal";
 @import "foundation/components/joyride";
 @import "foundation/components/clearing";
@@ -33,7 +33,7 @@
 @import "foundation/components/pagination";
 @import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
+@import "foundation/components/progress-bars";
 // @import "foundation/components/side-nav";
 // @import "foundation/components/sub-nav";
 @import "foundation/components/switch";
