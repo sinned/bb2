@@ -42,3 +42,9 @@ h4.has-tip {
 .sidebar-spirits {
   height: 100%;
   background: url("../img/spirits.jpg"); }
+
+.reveal-modal {
+  z-index: 9999; }
+
+.reveal-modal-bg {
+  z-index: 9998; }
