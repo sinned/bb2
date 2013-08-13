@@ -31,12 +31,10 @@
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
-			<h2><a href="subscribe.php?subtype=cocktails">Mix Cocktails</a></h2>
-			<p>I like the balance of a well made drink.  To me a cocktail is more than the sum of its parts.</p>
+			<a href="subscribe.php?subtype=cocktails"><img src="img/mix-cocktails.jpg" alt="Mix Cocktails" /></a>
 		</div>
 		<div class="large-6 small-6 column card">
-			<h2><a href="subscribe.php?subtype=spirits">Discover Spirits</a></h2>
-			<p>I like a spirit with a lot of character.  My drinks come neat or on the rocks.</p>
+			<a href="subscribe.php?subtype=spirits"><img src="img/discover-spirits.jpg" alt="Discover Spirits" /></a>
 		</div>
 	</div>
 

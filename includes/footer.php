@@ -6,7 +6,7 @@
         <li><a href="http://bittersandbottles.wordpress.com/faq/">About Us</a></li>
         <li><a href="http://bittersandbottles.wordpress.com/terms/">Terms of Service</a></li>
         <li><a href="http://bittersandbottles.wordpress.com/privacy/">Privacy</a></li>
-        <li class="right">Prepared for life.</li>
+        <li class="right hide-for-small">Prepared for life.</li>
       <ul>
 		</div>
 	</div>
