@@ -120,7 +120,7 @@
 						</ul>
 						<div id='whofor' class='<?php echo $subfor=='gift' ? '' : 'hide'; ?>'>
 							<h5>What is the name of the recipient?</h5>
-							<input type="text" value='Giftee'/>
+							<input type="text" value='Lucky Recipient&rsquo;s Name' placeholder='Lucky Recipient&rsquo;s Name' />
 						</div>
 					</div>
 				</div>
