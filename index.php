@@ -11,23 +11,32 @@
 </head>
 <body>
 	<?php include "includes/header.php"; ?>
-
 	<div class="row">
-		<div class="large-12 column">
-			<img src="img/bar.jpg" alt="bar" />
+		<div id="marquee" class="large-12 column">
+			<ul data-orbit>
+			  <li>
+				<a href="http://bittersandbottles.wordpress.com/about/"><img src="img/marquee-1.jpg" alt="Your Home Bar, Delivered" /></a>
+			  </li>
+			  <li>
+				<a href="subscribe.php?subtype=cocktails"><img src="img/marquee-2.jpg" alt="Mix The Cocktails That Matter" /></a>
+			  </li>
+			  <li>
+				<a href="subscribe.php?subtype=spirits"><img src="img/marquee-3.jpg" alt="Discover The Spirits Worth Sipping" /></a>
+			  </li>
+			</ul>			
 		</div>
 	</div>
-
 	<div class="row">
-		<div class="large-6 small-6 column">
+		&nbsp;
+	</div>
+	<div class="row">
+		<div class="large-6 small-6 column card">
 			<h2><a href="subscribe.php?subtype=cocktails">Cocktails <br />Subscription</a></h2>
-			<p>Marketing text goes here</p>
-			<a href="subscribe.php?subtype=cocktails" class="button">BUY NOW</a>
+			<p>Marketing text goes here. Blah blah blah.</p>
 		</div>
-		<div class="large-6 small-6 column">
+		<div class="large-6 small-6 column card">
 			<h2><a href="subscribe.php?subtype=spirits">Spirits <br />Subscription</a></h2>
 			<p>Marketing text goes here</p>
-			<a href="subscribe.php?subtype=spirits" class="button">BUY NOW</a>
 		</div>
 	</div>
 
