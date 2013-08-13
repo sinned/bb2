@@ -18,6 +18,9 @@ a#subscribe-process {
 a#subscribe-process:hover {
   background: #444; }
 
+.top-bar .name {
+  font-size: 26px; }
+
 .top-bar .name h1 a:hover {
   background: #fff;
   color: #999; }

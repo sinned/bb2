@@ -10,6 +10,11 @@
       <ul>
 		</div>
 	</div>
+  <div class="row">
+    <div class="large-12 column">
+      <p>240 Grand Avenue, South San Francisco, CA 94080</p>
+    </div>
+  </div>
 
   <div id="myModal" class="reveal-modal"></div>
 
