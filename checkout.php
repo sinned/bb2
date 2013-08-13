@@ -6,10 +6,11 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Bitters+Bottles</title>
-<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="stylesheets/normalize.css" />
-<link rel="stylesheet" href="stylesheets/app.css">
-<link rel="stylesheet" href="stylesheets/bittersbottles.css">
+	<link href='http://fonts.googleapis.com/css?family=Cabin:700|Ropa+Sans|Fauna+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="stylesheets/normalize.css" />
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/bittersbottles.css">
 
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
@@ -30,6 +31,8 @@
     /* BEGIN CUSTOM SHIPPING LOGIC */
   	addShippingOption(1, 0, '', 'Shipped via USPS/UPS');
   	addShippingOption(2, 0, '', 'Local Pickup');
+  	FC.locations.limitCountriesTo(["US"];
+  	FC.locations.limitStatesTo("US", ["CA", "NY"], "shipping");
     /* END CUSTOM SHIPPING LOGIC */
   }
  
@@ -110,46 +113,38 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
   //]]>
 </script>
 
-<script type="text/javascript">
-jQuery(document).ready(function(){
-  var shippingCountry = "US";
-  var includeShippingStates = ["NY", "CA"];
-  cIndex = -1;
-  var newRegions = [];
-  for (var i = 0; i < FC.locations.config.locations.length; i++) {
-    if (FC.locations.config.locations[i].cc2 == shippingCountry) {
-      cIndex = i;
-    }
-  }
-  if (cIndex != -1) {
-    for (var i = 0; i < FC.locations.config.locations[cIndex].r.length; i++) {
-      for (var s = 0; s < includeShippingStates.length; s++) {
-        if (FC.locations.config.locations[cIndex].r[i].c == includeShippingStates[s]) {
-          newRegions.push(FC.locations.config.locations[cIndex].r[i]);
-        }
-      }
-    }
-
-    // Just update the shipping locations
-    FC.locations.config.shippingLocations[cIndex].r = newRegions;
-
-    // Set shipping country to the US
-    jQuery('#shipping_country').val('US');
-    jQuery('#shipping_country_name').val('United States');
-    jQuery('#shipping_country_name').attr('readonly', true).focus(function() {
-      this.blur();
-    });
-
-    FC.checkout.setAutoComplete("shipping_state");
-
-    // Require the shipping address be set as billing can be from anywhere.
-    FC.checkout.requireShippingAddress();
-  }
-});
-</script>
 </head>
 <body>
-	<?php include "includes/header.php"; ?>
+	<div class="row">
+		<div class="large-12 column">
+			<div class="contain-to-grid fixed">
+				<nav class="top-bar">
+				  <ul class="title-area">
+				    <!-- Title Area -->
+				    <li class="name"><h1><a href="index.php">Bitters+Bottles </a></h1>
+				    </li>
+				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+				  </ul>
+
+				  <section class="top-bar-section">
+				    <ul class="right">				
+						<li class="divider"></li>    	
+						<li><a href="subscribe.php?subtype=cocktails">Cocktails</a></li>
+						<li class="divider"></li>    	
+						<li><a href="subscribe.php?subtype=spirits">Spirits</a></li>
+						<li class="divider"></li>    	
+						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
+						<li class="divider"></li>    	
+						<li><a href="http://bittersandbottles.wordpress.com/faq/">FAQ</a></li>
+						<li class="divider"></li>    	
+						<li><a href="http://bittersandbottles.wordpress.com/contact-us/">Contact Us</a></li>
+					</ul>
+				  </section>
+				</nav>		
+			</div>
+		</div>
+	</div>
 	<div class="row">
 		<div class="large-12 column">
 			^^cart^^
