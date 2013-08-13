@@ -31,8 +31,9 @@
     /* BEGIN CUSTOM SHIPPING LOGIC */
   	addShippingOption(1, 0, '', 'Shipped via USPS/UPS');
   	addShippingOption(2, 0, '', 'Local Pickup');
-  	FC.locations.limitCountriesTo(["US"];
+  	FC.locations.limitCountriesTo(["US"]);
   	FC.locations.limitStatesTo("US", ["CA", "NY"], "shipping");
+  	FC.checkout.requireShippingAddress();
     /* END CUSTOM SHIPPING LOGIC */
   }
  
@@ -155,6 +156,43 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 			^^custom_end^^			
 		</div>
 	</div>
-	<?php include "includes/footer.php"; ?>
+
+	<div class="row">
+		<div class="large-12 column">
+			<hr />
+      <ul class="inline-list">
+        <li><a href="http://bittersandbottles.wordpress.com/faq/">About Us</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/terms/">Terms of Service</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/privacy/">Privacy</a></li>
+        <li class="right hide-for-small">Prepared for life.</li>
+      <ul>
+		</div>
+	</div>
+
+  <!-- <script src="js/vendor/zepto.js"></script>  -->
+  <script src="js/foundation.min.js"></script>
+
+  <!--
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="js/foundation/foundation.orbit.js"></script>    
+    <script src="js/foundation/foundation.alerts.js"></script>
+    <script src="js/foundation/foundation.clearing.js"></script>
+    <script src="js/foundation/foundation.cookie.js"></script>
+    <script src="js/foundation/foundation.dropdown.js"></script>
+    <script src="js/foundation/foundation.forms.js"></script>
+    <script src="js/foundation/foundation.joyride.js"></script>
+    <script src="js/foundation/foundation.magellan.js"></script>
+    <script src="js/foundation/foundation.reveal.js"></script>
+    <script src="js/foundation/foundation.section.js"></script>
+    <script src="js/foundation/foundation.tooltips.js"></script>
+    <script src="js/foundation/foundation.interchange.js"></script>
+    <script src="js/foundation/foundation.placeholder.js"></script>
+    <script src="js/foundation/foundation.abide.js"></script>
+  -->
+  
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>
