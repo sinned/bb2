@@ -1,4 +1,4 @@
-<link href='http://fonts.googleapis.com/css?family=Cabin:700|Ropa+Sans|Fauna+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kite+One|Raleway:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheets/normalize.css" />
 
 <link rel="stylesheet" href="stylesheets/app.css" />

@@ -12,7 +12,8 @@
 	</div>
   <div class="row">
     <div class="large-12 column">
-      <p>240 Grand Avenue, South San Francisco, CA 94080</p>
+      <p><img src="img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /> 
+        <br />240 Grand Avenue, South San Francisco, CA 94080</p>
     </div>
   </div>
 
