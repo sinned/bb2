@@ -46,8 +46,19 @@ h4.has-tip {
   height: 100%;
   background: url("../img/spirits.jpg"); }
 
+.opaque {
+  background: #000;
+  z-index: 9998; }
+
 .reveal-modal {
   z-index: 9999; }
 
 .reveal-modal-bg {
   z-index: 9998; }
+
+#ageModal {
+  text-align: center; }
+
+#ageModal input {
+  max-width: 300px;
+  margin: 0 auto 20px; }

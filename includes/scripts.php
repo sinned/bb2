@@ -12,5 +12,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
+<script src="js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/app.js" type="text/javascript" charset="utf-8"></script>

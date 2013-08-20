@@ -21,6 +21,7 @@
 
     // Begin Custom B+B Javascript.
     console.log('hello dennis');
+    bb.age_verify.init();
 
   });
 

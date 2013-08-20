@@ -165,9 +165,58 @@ bb.subscription = (function() {
       $('form#buy-subscription').submit(); 
   }
 
-
   return {
     init:init
+  }
+
+})();
+
+bb.age_verify = (function() {
+
+  var age_verified_check = 'aug20a';
+
+  function init() {
+    console.log('initing the age verification');
+
+    $('#ageModal a').click(function(e) {
+      e.preventDefault();
+      console.log('CLICKY', $(this).html());
+      if ($(this).html().toLowerCase() == 'yes') {
+        age_verified();
+      }
+    });
+
+    verify();
+  }
+
+  function age_verified() {
+    // set the cookie
+    $.cookie('age_verified', age_verified_check, { expires: 14 });
+    // close the modal
+    $('#ageModal').foundation('reveal', 'close');
+  }
+
+  function verify() {
+    console.log('Reading age cookie', $.cookie('age_verified'));
+    if ($.cookie('age_verified') != age_verified_check || document.location.search == '?verify') {
+      showmodal();
+    }
+  }
+
+  function showmodal() {
+    $('#ageModal').foundation('reveal', 'open' ,
+      {
+        animation: 'fade',
+        animationSpeed: 250,
+        closeOnBackgroundClick: false
+      }
+    );
+    $('.reveal-modal-bg').css('background-color','#000');
+  }
+
+  return {
+    init: init,
+    verify:verify
   }
 
 })();

@@ -16,6 +16,14 @@
     </div>
   </div>
 
+  <div id="ageModal" class="reveal-modal">
+    <img src="img/bb-logo.png" alt="Bitters+Bottles" />
+    <h3>What is your email address?</h3>
+    <input type="text" name="email" />
+    <h3>Are you over 21 years of age?</h3>
+    <a href="#" class="button">Yes</a>
+    <a href="#" class="button">No</a>
+  </div>
   <div id="myModal" class="reveal-modal"></div>
 
   <script src="js/vendor/zepto.js"></script>  
