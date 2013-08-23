@@ -236,6 +236,10 @@ bb.mailinglist = (function() {
       e.preventDefault();
       $('.reveal-modal').foundation('reveal', 'close');
     });
+    $('.open-sub').click(function (e) {
+      e.preventDefault();
+      $('#subModal').foundation('reveal', 'open');
+    });    
   }
 
   return {
