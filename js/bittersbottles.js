@@ -193,7 +193,15 @@ bb.age_verify = (function() {
     // set the cookie
     $.cookie('age_verified', age_verified_check, { expires: 14 });
     // close the modal
-    $('#ageModal').foundation('reveal', 'close');
+    //$('#ageModal').foundation('reveal', 'close');
+    // show the newsletter sub modal.
+    $('#subModal').foundation('reveal', 'open' ,
+      {
+        animationSpeed: 250,
+        closeOnBackgroundClick: true
+      }
+    );
+    $('.reveal-modal-bg').css('background-color','rgba(0,0,0,.65)');
   }
 
   function verify() {
@@ -206,7 +214,6 @@ bb.age_verify = (function() {
   function showmodal() {
     $('#ageModal').foundation('reveal', 'open' ,
       {
-        animation: 'fade',
         animationSpeed: 250,
         closeOnBackgroundClick: false
       }
@@ -219,4 +226,19 @@ bb.age_verify = (function() {
     verify:verify
   }
 
+})();
+
+bb.mailinglist = (function() {
+
+  function init () {
+    console.log('init mailinglist stuff');
+    $('.close-sub').click(function (e) {
+      e.preventDefault();
+      $('.reveal-modal').foundation('reveal', 'close');
+    });
+  }
+
+  return {
+    init: init
+  }
 })();
