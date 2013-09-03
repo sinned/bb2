@@ -25,7 +25,7 @@
 						<li class="divider"></li>    	
 						<li><a href="http://bittersandbottles.wordpress.com/faq/">FAQ</a></li>
 						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/contact-us/">Contact Us</a></li>
+				        <li><a class="open-sub" href="http://eepurl.com/D9kyL">Mailing List</a></li>
 					</ul>
 				  </section>
 				</nav>		

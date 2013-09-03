@@ -6,7 +6,7 @@
         <li><a href="http://bittersandbottles.wordpress.com/faq/">About Us</a></li>
         <li><a href="http://bittersandbottles.wordpress.com/terms/">Terms of Service</a></li>
         <li><a href="http://bittersandbottles.wordpress.com/privacy/">Privacy</a></li>
-        <li><a class="open-sub" href="http://eepurl.com/D9kyL">Mailing List</a></li>
+        <li><a href="http://bittersandbottles.wordpress.com/contact-us/">Contact Us</a></li>
         <li class="right hide-for-small">Prepared for Now.</li>
       <ul>
 		</div>
@@ -18,6 +18,7 @@
     <h3>Are you over 21 years of age?</h3>
     <a href="#" class="button">Yes</a>
     <a href="#" class="button">No</a>
+
   </div>
   <div id="subModal" class="reveal-modal">
     <img src="img/bb-logo.png" alt="Bitters+Bottles" />

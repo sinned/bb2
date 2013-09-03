@@ -193,8 +193,9 @@ bb.age_verify = (function() {
     // set the cookie
     $.cookie('age_verified', age_verified_check, { expires: 14 });
     // close the modal
-    //$('#ageModal').foundation('reveal', 'close');
+    $('#ageModal').foundation('reveal', 'close');
     // show the newsletter sub modal.
+    /* don't show the newsletter sub modal anymore DY 9/3/2013
     $('#subModal').foundation('reveal', 'open' ,
       {
         animationSpeed: 250,
@@ -202,6 +203,7 @@ bb.age_verify = (function() {
       }
     );
     $('.reveal-modal-bg').css('background-color','rgba(0,0,0,.65)');
+    */
   }
 
   function verify() {
@@ -239,6 +241,7 @@ bb.mailinglist = (function() {
     $('.open-sub').click(function (e) {
       e.preventDefault();
       $('#subModal').foundation('reveal', 'open');
+      $('.reveal-modal-bg').css('background-color','rgba(0,0,0,.65)');
     });    
   }
 

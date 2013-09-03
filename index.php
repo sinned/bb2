@@ -13,7 +13,7 @@
 	<?php include "includes/header.php"; ?>
 	<div class="row">
 		<div id="marquee" class="large-12 column">
-			<a href="http://bittersandbottles.wordpress.com/about/"><img src="img/your-home-bar-delivered.jpg" alt="Your Home Bar, Delivered" /></a>
+			<img src="img/your-home-bar-delivered.jpg" alt="Your Home Bar, Delivered" />
 		</div>
 	</div>
 	<div class="row">
