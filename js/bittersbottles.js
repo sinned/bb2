@@ -246,3 +246,25 @@ bb.mailinglist = (function() {
     init: init
   }
 })();
+
+bb.cards = (function() {
+
+  function init() {
+    $('.card').mouseenter(function (e) {
+      var hoverimg = $(this).find('img');
+      var origsrc = hoverimg.attr('src');
+      var newsrc = origsrc.replace('.jpg','-hover.jpg');
+      hoverimg.attr('src', newsrc);
+    }).mouseleave(function (e) {
+      var hoverimg = $(this).find('img');
+      var origsrc = hoverimg.attr('src');
+      var newsrc = origsrc.replace('-hover.jpg','.jpg');      
+      hoverimg.attr('src',newsrc);
+    });
+  }
+
+  return {
+    init: init
+  }
+
+})();

@@ -23,6 +23,8 @@
     console.log('hello dennis');
     bb.age_verify.init();
     bb.mailinglist.init();
+    bb.cards.init();
+
   });
 
   // UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids

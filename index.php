@@ -13,17 +13,7 @@
 	<?php include "includes/header.php"; ?>
 	<div class="row">
 		<div id="marquee" class="large-12 column">
-			<ul data-orbit>
-			  <li>
-				<a href="http://bittersandbottles.wordpress.com/about/"><img src="img/marquee-1.jpg" alt="Your Home Bar, Delivered" /></a>
-			  </li>
-			  <li>
-				<a href="subscribe.php?subtype=cocktails"><img src="img/marquee-2.jpg" alt="Mix The Cocktails That Matter" /></a>
-			  </li>
-			  <li>
-				<a href="subscribe.php?subtype=spirits"><img src="img/marquee-3.jpg" alt="Discover The Spirits Worth Sipping" /></a>
-			  </li>
-			</ul>			
+			<a href="http://bittersandbottles.wordpress.com/about/"><img src="img/your-home-bar-delivered.jpg" alt="Your Home Bar, Delivered" /></a>
 		</div>
 	</div>
 	<div class="row">
@@ -31,10 +21,10 @@
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
-			<a href="subscribe.php?subtype=cocktails"><img src="img/mix-cocktails.jpg" alt="Mix Cocktails" /></a>
+			<a href="subscribe.php?subtype=cocktails"><img src="img/cocktails-distressed.jpg" alt="Mix Cocktails" /></a>
 		</div>
 		<div class="large-6 small-6 column card">
-			<a href="subscribe.php?subtype=spirits"><img src="img/discover-spirits.jpg" alt="Discover Spirits" /></a>
+			<a href="subscribe.php?subtype=spirits"><img src="img/spirits-distressed.jpg" alt="Discover Spirits" /></a>
 		</div>
 	</div>
 
