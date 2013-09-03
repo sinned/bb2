@@ -1,4 +1,3 @@
-<IfModule mod_rewrite.c>
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
