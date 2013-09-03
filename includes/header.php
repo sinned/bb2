@@ -17,7 +17,6 @@
 							<span id="fc_singular"> item </span>
 							<span id="fc_plural"> items </span> in cart
 						</a></li>					
-						<li class="divider"></li>    	
 						<li><a href="subscribe.php?subtype=cocktails">Cocktails</a></li>
 						<li class="divider"></li>    	
 						<li><a href="subscribe.php?subtype=spirits">Spirits</a></li>
