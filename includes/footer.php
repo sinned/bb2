@@ -21,7 +21,7 @@
 
   </div>
   <div id="subModal" class="reveal-modal">
-    <img src="img/bb-logo.png" alt="Bitters+Bottles" />
+    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
     <?php include "mailchimp-form.php"; ?>
     <p class="right" style="font-size:12px;">
         <a class="close-sub" href="#">No thanks.</a>
@@ -37,8 +37,8 @@
   </div>
   <div id="myModal" class="reveal-modal"></div>
 
-  <script src="js/vendor/zepto.js"></script>  
-  <script src="js/foundation.min.js"></script>
+  <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>  
+  <script src="<?php echo WEBROOT; ?>js/foundation.min.js"></script>
 
   <!--
     <script src="js/foundation/foundation.js"></script>

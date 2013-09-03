@@ -5,7 +5,7 @@
 				  <ul class="title-area">
 				    <!-- Title Area -->
 				    <li class="name">
-				    	<h1><a href="index.php"><img src="img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
+				    	<h1><a href="index.php"><img src="<?php echo WEBROOT; ?>img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
 				    </li>
 				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
@@ -17,9 +17,9 @@
 							<span id="fc_singular"> item </span>
 							<span id="fc_plural"> items </span> in cart
 						</a></li>					
-						<li><a href="subscribe.php?subtype=cocktails">Cocktails</a></li>
+						<li><a href="<?php echo WEBROOT; ?>subscribe.php?subtype=cocktails">Cocktails</a></li>
 						<li class="divider"></li>    	
-						<li><a href="subscribe.php?subtype=spirits">Spirits</a></li>
+						<li><a href="<?php echo WEBROOT; ?>subscribe.php?subtype=spirits">Spirits</a></li>
 						<li class="divider"></li>    	
 						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
 						<li class="divider"></li>    	

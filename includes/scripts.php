@@ -1,9 +1,17 @@
-<link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="stylesheets/normalize.css" />
+<?php
+switch ($_SERVER['SERVER_NAME']) {
+	case 'localhost':
+		define('WEBROOT', '/bb2/');
+	break;
+	default:
+		define('WEBROOT', '/');
+}
+?><link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
 
-<link rel="stylesheet" href="stylesheets/app.css" />
-<link rel="stylesheet" href="stylesheets/orbit.css">
-<link rel="stylesheet" href="stylesheets/bittersbottles.css" />
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/app.css" />
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/orbit.css">
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/bittersbottles.css" />
 
 <script src="js/vendor/custom.modernizr.js"></script>
 
@@ -12,6 +20,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
-<script src="js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/app.js" type="text/javascript" charset="utf-8"></script>
