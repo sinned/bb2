@@ -197,7 +197,7 @@
 					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
 					<!-- <input type="hidden" name="empty" value="true" /> -->
 					</form>				
-					<a id="subscribe-process" href="#" class='button large expand'>Buy Subscription</a>
+					<a id="subscribe-process" href="#" class='button large expand'>Add to Cart</a>
 
 				</div>	
 			</div>
