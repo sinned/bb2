@@ -1,3 +1,9 @@
+.subscribe-top {
+  text-align: center; }
+
+.subscribe-top h1 {
+  text-transform: uppercase; }
+
 .subscription-choices .picked {
   background: #336600;
   color: #fff; }

@@ -21,9 +21,9 @@
 						<li class="divider"></li>    	
 						<li><a href="<?php echo WEBROOT; ?>subscribe.php?subtype=spirits">Spirits</a></li>
 						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
+						<li><a href="<?php echo WEBROOT; ?>blog/">Blog</a></li>
 						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/faq/">FAQ</a></li>
+						<li><a href="<?php echo WEBROOT; ?>blog/faq/">FAQ</a></li>
 						<li class="divider"></li>    	
 				        <li><a class="open-sub" href="http://eepurl.com/D9kyL">Mailing List</a></li>
 					</ul>

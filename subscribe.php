@@ -34,14 +34,14 @@
 
 	switch ($subtype) {
 		case 'cocktails':
-			$product_title = "COCKTAILS";
+			$product_title = "Cocktails";
 			$product_description = "Build your home bar<br />Receive monthly deliveries with the bottled ingredients for 4 classic cocktails<br />Master the recipes to take you from grasshopper to sensei";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 100;
 		break;
 		case 'spirits':
-			$product_title = "SPIRITS";	
+			$product_title = "Spirits";	
 			$product_description = "Build your home bar<br />Receive, sip, and discover a rare spirit every month<br />Let us be your spirit guide";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
@@ -101,7 +101,7 @@
 	<div class="row">
 		<div class="large-8 small-12 column">
 			<div class="row">
-				<div class="large-12 column" style="text-align:center;">
+				<div class="large-12 column subscribe-top">
 					<h1><?php echo $product_title; ?></h1>
 					<p><?php echo $product_description; ?></p>
 				</div>
