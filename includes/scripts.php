@@ -1,4 +1,4 @@
-<link href='http://fonts.googleapis.com/css?family=Kite+One|Raleway:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:700,400|Antic+Slab|Droid+Serif|Kite+One|Raleway:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheets/normalize.css" />
 
 <link rel="stylesheet" href="stylesheets/app.css" />

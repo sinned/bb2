@@ -27,7 +27,8 @@ $em-base: 16px !default;
 $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 //$body-font-family: 'Ropa Sans', Arial, sans-serif;
-$body-font-family: 'Kite One', sans-serif;
+//$body-font-family: 'Kite One', sans-serif;
+$body-font-family: 'Antic Slab', serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -118,8 +119,9 @@ $success-color: #8FBE00;
 
 //// Heading font styles
 
-$header-font-family: 'Raleway', Verdana, serif;;
-// $header-font-weight: bold;
+$header-font-family: 'Raleway', Verdana, serif;
+$header-font-family: 'Merriweather Sans', Verdana, serif;
+$header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.2;
@@ -303,8 +305,8 @@ $anchor-font-color-hover: $hover-color;
 
 //// Button text styles.
 
-// $button-font-family: inherit;
-// $button-font-color: #fff;
+//$button-font-family: 'Arial', sans-serif;
+// $button-font-color: red;
 // $button-font-color-alt: #333;
 // $button-font-med: emCalc(16px);
 // $button-font-tny: emCalc(11px);

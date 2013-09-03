@@ -1,5 +1,10 @@
 .subscription-choices .picked {
-  border: 4px solid #CC333F; }
+  background: #336600;
+  color: #fff; }
+
+.subscription-choices .picked:hover {
+  background: #003300;
+  color: #eee; }
 
 .subscription-choices h3 {
   margin: 0; }
@@ -9,8 +14,9 @@
   line-height: 1em;
   font-size: .7em; }
 
-.subscription-choices li a {
-  min-height: 100px; }
+.subscription-choices li {
+  margin: 0;
+  padding: 0; }
 
 a#subscribe-process {
   background: #333; }

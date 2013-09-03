@@ -1,11 +1,14 @@
 // Global Foundation Settings
 @import "settings";
 
-.subscription-choices a {
+.subscription-choices .picked {
+	background: #336600;
+	color: #fff;
 }
 
-.subscription-choices .picked {
-	border: 4px solid #CC333F;
+.subscription-choices .picked:hover {
+	background: #003300;
+	color: #eee;
 }
 
 .subscription-choices .disabled {
@@ -21,7 +24,8 @@
 	font-size:.7em;
 }
 
-.subscription-choices li a { min-height: 100px;}
+.subscription-choices li a { }
+.subscription-choices li { margin: 0; padding: 0; }
 
 a#subscribe-process { background: #333; }
 a#subscribe-process:hover { background: #444; }
