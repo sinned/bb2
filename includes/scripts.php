@@ -13,7 +13,7 @@ switch ($_SERVER['SERVER_NAME']) {
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/orbit.css">
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/bittersbottles.css" />
 
-<script src="js/vendor/custom.modernizr.js"></script>
+<script src="<?php echo WEBROOT; ?>js/vendor/custom.modernizr.js"></script>
 
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />

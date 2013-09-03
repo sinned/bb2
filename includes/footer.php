@@ -6,7 +6,7 @@
         <li><a href="<?php echo WEBROOT; ?>blog/about-us/">About Us</a></li>
         <li><a href="<?php echo WEBROOT; ?>terms/">Terms of Service</a></li>
         <li><a href="<?php echo WEBROOT; ?>privacy/">Privacy</a></li>
-        <li><a href="<?php echo WEBROOT; ?>contact-us/">Contact Us</a></li>
+        <li><a href="<?php echo WEBROOT; ?>contact/">Contact Us</a></li>
         <li class="right hide-for-small">Prepared for Now.</li>
       <ul>
 		</div>

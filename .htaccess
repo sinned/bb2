@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule cocktails/ subscribe.php?subtype=cocktails [L]
+RewriteRule spirits/ subscribe.php?subtype=spirits [L]
+RewriteRule terms/ blog/terms/ [L]
+RewriteRule privacy/ blog/privacy/ [L]
+RewriteRule about-us/ blog/about-us/ [L]
+RewriteRule faq/ blog/faq/ [L]
+RewriteRule contact/ contact.php [L]
+</IfModule>

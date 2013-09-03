@@ -17,13 +17,13 @@
 							<span id="fc_singular"> item </span>
 							<span id="fc_plural"> items </span> in cart
 						</a></li>					
-						<li><a href="<?php echo WEBROOT; ?>subscribe.php?subtype=cocktails">Cocktails</a></li>
+						<li><a href="<?php echo WEBROOT; ?>cocktails/">Cocktails</a></li>
 						<li class="divider"></li>    	
-						<li><a href="<?php echo WEBROOT; ?>subscribe.php?subtype=spirits">Spirits</a></li>
+						<li><a href="<?php echo WEBROOT; ?>spirits/">Spirits</a></li>
 						<li class="divider"></li>    	
 						<li><a href="<?php echo WEBROOT; ?>blog/">Blog</a></li>
 						<li class="divider"></li>    	
-						<li><a href="<?php echo WEBROOT; ?>blog/faq/">FAQ</a></li>
+						<li><a href="<?php echo WEBROOT; ?>faq/">FAQ</a></li>
 						<li class="divider"></li>    	
 				        <li><a class="open-sub" href="http://eepurl.com/D9kyL">Mailing List</a></li>
 					</ul>
