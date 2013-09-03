@@ -18,12 +18,12 @@
 	}
 
 	// choices picked for the subscription options...
-	$subtype       = !empty($_REQUEST['subtype']) ? strtolower($_REQUEST['subtype']) : 'cocktails'; // subscription type
-	$subfor       = !empty($_REQUEST['subfor']) ? strtolower($_REQUEST['subfor']) : 'me'; // who this subscription is for
+	$subtype       = !empty($_REQUEST['subtype']) ? strtolower($_REQUEST['subtype']) : ''; // subscription type
+	$subfor       = !empty($_REQUEST['subfor']) ? strtolower($_REQUEST['subfor']) : ''; // who this subscription is for
 	$shipto       = !empty($_REQUEST['shipto']) ? strtolower($_REQUEST['shipto']) : ''; // who this subscription is for
-	$subfreq       = !empty($_REQUEST['subfreq']) ? strtolower($_REQUEST['subfreq']) : 'monthly'; // how often to bill
-	$subduration       = !empty($_REQUEST['subduration']) ? strtolower($_REQUEST['subduration']) : '12'; // how long to subscribe for
-	$substart       = !empty($_REQUEST['substart']) ? strtolower($_REQUEST['substart']) : 'yes'; // starter or not
+	$subfreq       = !empty($_REQUEST['subfreq']) ? strtolower($_REQUEST['subfreq']) : ''; // how often to bill
+	$subduration       = !empty($_REQUEST['subduration']) ? strtolower($_REQUEST['subduration']) : ''; // how long to subscribe for
+	$substart       = !empty($_REQUEST['substart']) ? strtolower($_REQUEST['substart']) : ''; // starter or not
 
 	// init
 	$price_per_month = 0;
@@ -34,14 +34,14 @@
 
 	switch ($subtype) {
 		case 'cocktails':
-			$product_title = "Cocktail Subscription";
+			$product_title = "COCKTAILS";
 			$product_description = "Build your home bar<br />Receive monthly deliveries with the bottled ingredients for 4 classic cocktails<br />Master the recipes to take you from grasshopper to sensei";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 100;
 		break;
 		case 'spirits':
-			$product_title = "Spirits Subscription";	
+			$product_title = "SPIRITS";	
 			$product_description = "Build your home bar<br />Receive, sip, and discover a rare spirit every month<br />Let us be your spirit guide";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
@@ -76,7 +76,8 @@
 	$foxy_product_code = strtoupper($subtype) . '-' . strtoupper($subfreq) . '-' . strtoupper($subduration);
 
 
-?><!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+?><!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
@@ -97,8 +98,6 @@
 </head>
 <body>
 	<?php include "includes/header.php"; ?>
-
-
 	<div class="row">
 		<div class="large-8 small-12 column">
 			<div class="row">

@@ -4,12 +4,12 @@
 				<nav class="top-bar">
 				  <ul class="title-area">
 				    <!-- Title Area -->
-				    <li class="name"><h1><a href="index.php"><img src="img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
+				    <li class="name">
+				    	<h1><a href="index.php"><img src="img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
 				    </li>
 				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
 				  </ul>
-
 				  <section class="top-bar-section">
 				    <ul class="right">
 						<li><a id="fc_minicart" href="https://bittersandbottles.foxycart.com/cart?cart=view">
@@ -31,5 +31,6 @@
 				  </section>
 				</nav>		
 			</div>
+			<hr />
 		</div>
 	</div>
