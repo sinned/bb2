@@ -2256,7 +2256,7 @@ form.custom {
       line-height: 45px;
       background: white; }
       .top-bar-section li a:not(.button):hover {
-        background: #1a1a1a; }
+        background: #b3b3b3; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {

@@ -43,22 +43,13 @@ strong {
 a#subscribe-process { background: #333; }
 a#subscribe-process:hover { background: #444; }
 
-.top-bar .name {
-
-}
-
-.top-bar .name h1 a:hover {
+.top-bar .name h1 a:hover, .top-bar .name h1 a:focus {
 	background: #fff;
 	color: #999;
 }
 
 .top-bar li {
 	text-transform: uppercase;
-}
-
-.top-bar li a:hover {
-	color: #eee;
-	background: #333;	
 }
 
 a.button:hover {

@@ -8,7 +8,7 @@
 				    	<h1><a href="<?php echo WEBROOT; ?>"><img src="<?php echo WEBROOT; ?>img/bb-logo-300.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
 				    </li>
 				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+				    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 				  </ul>
 				  <section class="top-bar-section">
 				    <ul class="right">
@@ -17,6 +17,7 @@
 							<span id="fc_singular"> item </span>
 							<span id="fc_plural"> items </span> in cart
 						</a></li>					
+						<li class="divider"></li>    	
 						<li><a href="<?php echo WEBROOT; ?>cocktails/">Cocktails</a></li>
 						<li class="divider"></li>    	
 						<li><a href="<?php echo WEBROOT; ?>spirits/">Spirits</a></li>
