@@ -3,7 +3,7 @@
 		<div class="large-12 column">
 			<hr />
       <ul class="inline-list">
-        <li><a href="<?php echo WEBROOT; ?>blog/about-us/">About Us</a></li>
+        <li><a href="<?php echo WEBROOT; ?>about-us/">About Us</a></li>
         <li><a href="<?php echo WEBROOT; ?>terms/">Terms of Service</a></li>
         <li><a href="<?php echo WEBROOT; ?>privacy/">Privacy</a></li>
         <li><a href="<?php echo WEBROOT; ?>contact/">Contact Us</a></li>
