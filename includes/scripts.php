@@ -6,7 +6,8 @@ switch ($_SERVER['SERVER_NAME']) {
 	default:
 		define('WEBROOT', '/');
 }
-?><link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
+?>
+<link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
 
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/app.css" />
@@ -20,9 +21,6 @@ switch ($_SERVER['SERVER_NAME']) {
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
-<script src="<?php echo WEBROOT; ?>js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo WEBROOT; ?>js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo WEBROOT; ?>js/app.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,5 +30,9 @@ switch ($_SERVER['SERVER_NAME']) {
 
   ga('create', 'UA-40569793-1', 'bittersandbottles.com');
   ga('send', 'pageview');
-
 </script>
+
+<!-- Bitters+Bottles Scripts -->
+<script src="<?php echo WEBROOT; ?>js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/app.js" type="text/javascript" charset="utf-8"></script>

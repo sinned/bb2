@@ -1,16 +1,27 @@
-<!DOCTYPE html>
+<?php
+switch ($_SERVER['SERVER_NAME']) {
+	case 'localhost':
+		define('WEBROOT', '/bb2/');
+	break;
+	default:
+		define('WEBROOT', '/');
+}
+?><!DOCTYPE html>
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
+
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Bitters+Bottles</title>
 	<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
-	<link href='http://fonts.googleapis.com/css?family=Cabin:700|Ropa+Sans|Fauna+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="stylesheets/normalize.css" />
-	<link rel="stylesheet" href="stylesheets/app.css">
-	<link rel="stylesheet" href="stylesheets/bittersbottles.css">
+<link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
+
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/app.css" />
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/orbit.css">
+<link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/bittersbottles.css" />
 
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
@@ -278,36 +289,9 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 </script>
 </head>
 <body>
-	<div class="row">
-		<div class="large-12 column">
-			<div class="contain-to-grid fixed">
-				<nav class="top-bar">
-				  <ul class="title-area">
-				    <!-- Title Area -->
-				    <li class="name"><h1><a href="index.php">Bitters+Bottles </a></h1>
-				    </li>
-				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				    <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
-				  </ul>
 
-				  <section class="top-bar-section">
-				    <ul class="right">				
-						<li class="divider"></li>    	
-						<li><a href="subscribe.php?subtype=cocktails">Cocktails</a></li>
-						<li class="divider"></li>    	
-						<li><a href="subscribe.php?subtype=spirits">Spirits</a></li>
-						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/">Blog</a></li>
-						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/faq/">FAQ</a></li>
-						<li class="divider"></li>    	
-						<li><a href="http://bittersandbottles.wordpress.com/contact-us/">Contact Us</a></li>
-					</ul>
-				  </section>
-				</nav>		
-			</div>
-		</div>
-	</div>
+	<?php include "includes/header.php"; ?>
+
 	<div class="row">
 		<div class="large-12 column">
 			^^cart^^
@@ -319,24 +303,6 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="large-12 column">
-			<hr />
-      <ul class="inline-list">
-        <li><a href="http://bittersandbottles.wordpress.com/faq/">About Us</a></li>
-        <li><a href="http://bittersandbottles.wordpress.com/terms/">Terms of Service</a></li>
-        <li><a href="http://bittersandbottles.wordpress.com/privacy/">Privacy</a></li>
-        <li class="right hide-for-small">Prepared for life.</li>
-      <ul>
-		</div>
-	</div>
-
-  <!-- <script src="js/vendor/zepto.js"></script>  -->
-  <script src="js/foundation.min.js"></script>
-
-  
-  <script>
-    $(document).foundation();
-  </script>
+	<?php include "includes/footer.php"; ?>
 </body>
 </html>
