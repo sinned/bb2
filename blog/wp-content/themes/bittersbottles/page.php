@@ -1,12 +1,9 @@
 <?php get_header(); ?>
-
-<h1>The Blog</h1>
-
 <?php if ( have_posts() ) : ?>
 
 	<?php /* The loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-		<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		<h3><?php echo the_title(); ?></h3>
 		<p><?php echo the_content(); ?></p>
 
 	<?php endwhile; ?>
