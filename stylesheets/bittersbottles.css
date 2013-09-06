@@ -8,7 +8,7 @@ strong {
 .subscribe-top h1 {
   text-transform: uppercase; }
 
-.subscription-choices .picked {
+.subscription-choices .picked, .subscription-choices .picked:focus {
   background: #336600;
   color: #fff; }
 

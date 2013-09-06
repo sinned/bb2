@@ -14,12 +14,12 @@ strong {
 	text-transform: uppercase;
 }
 
-.subscription-choices .picked {
+.subscription-choices .picked, .subscription-choices .picked:focus {
 	background: #336600;
 	color: #fff;
 }
 
-.subscription-choices .picked:hover {
+.subscription-choices .picked:hover{
 	background: #003300;
 	color: #eee;
 }
