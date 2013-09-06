@@ -206,8 +206,8 @@ switch ($_SERVER['SERVER_NAME']) {
  
   function customShippingLogic() {
     /* BEGIN CUSTOM SHIPPING LOGIC */
- 	addShippingOption(1, 0, '', 'Standard Delivery');
-	addShippingOption(2, 0, '', 'Local Pickup');
+ 	//addShippingOption(1, 0, '', 'Standard Delivery');
+	//addShippingOption(2, 0, '', 'Local Pickup');
     /* END CUSTOM SHIPPING LOGIC */
   }
  
