@@ -78,7 +78,7 @@ bb.subscription = (function() {
   function update_price() {
     var total_price;
     var product_code = '';
-    var months_paid = 0;
+    var months_paid = 1;
     var product_name;
 
     product_code += subscription_type.toUpperCase(); // start the product code
