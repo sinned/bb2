@@ -38,7 +38,7 @@
 			$product_description = "Build your home bar<br />Receive monthly deliveries with the bottled ingredients for 4 classic cocktails<br />Master the recipes to take you from grasshopper to sensei";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
-			$price_per_month = 100;
+			$price_per_month = 95;
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
