@@ -20,6 +20,14 @@
 		&nbsp;
 	</div>
 	<div class="row">
+		<div class="large-12 column text-center">
+			<h4>Now shipping to California &amp; New York only.</h4>
+		</div>
+	</div>
+	<div class="row">
+		&nbsp;
+	</div>
+	<div class="row">
 		<div class="large-6 small-6 column card">
 			<a href="cocktails/"><img src="img/cocktails-distressed.jpg" alt="Mix Cocktails" /></a>
 		</div>
