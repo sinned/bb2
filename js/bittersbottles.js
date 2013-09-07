@@ -78,12 +78,32 @@ bb.subscription = (function() {
   function update_price() {
     var total_price;
     var product_code = '';
-    var months_paid;
+    var months_paid = 0;
     var product_name;
 
     product_code += subscription_type.toUpperCase(); // start the product code
 
-    if ($('a#subfreq_monthly').hasClass('picked')) {
+    if ($('a#subfreq_once').hasClass('picked')) {
+      product_code += '-ONCE';
+      if ($('a#subduration_3').hasClass('picked')) {
+        months_paid = 3;
+      } else if ($('a#subduration_6').hasClass('picked')) {
+        months_paid = 6;
+      } else if ($('a#subduration_12').hasClass('picked')) {
+        months_paid = 12;
+      }
+
+      total_price = price_per_month * months_paid;
+      product_code += '-' + months_paid;
+      $('form#buy-subscription [name=name]').val('Prepaid ' +capitaliseFirstLetter(subscription_type)+ ' Subscription, ' +months_paid+ ' months');
+      $('#price_desc').html("$" + total_price.toFixed(2));        
+
+      // turn off subscription form values
+      $('form#buy-subscription [name=sub_frequency]').val('');
+      $('form#buy-subscription [name=sub_startdate]').val('');
+      $('form#buy-subscription [name=sub_enddate]').val('');
+
+    } else if ($('a#subfreq_monthly').hasClass('picked')) {
       total_price = price_per_month;
       product_code += '-MONTHLY';
       // turn on subscription form values
@@ -111,28 +131,9 @@ bb.subscription = (function() {
         product_name = 'Monthly ' +capitaliseFirstLetter(subscription_type)+ ' Subscription, ' +months_paid+ ' months';
       }
 
-      $('form#buy-subscription [name=name]').val(product_name);
-
+      $('form#buy-subscription [name=name]').val(product_name);      
     } else {
-      product_code += '-ONCE';
-      if ($('a#subduration_3').hasClass('picked')) {
-        months_paid = 3;
-      } else if ($('a#subduration_6').hasClass('picked')) {
-        months_paid = 6;
-      } else if ($('a#subduration_12').hasClass('picked')) {
-        months_paid = 12;
-      }
-
-      total_price = price_per_month * months_paid;
-      product_code += '-' + months_paid;
-      $('form#buy-subscription [name=name]').val('Prepaid ' +capitaliseFirstLetter(subscription_type)+ ' Subscription, ' +months_paid+ ' months');
-      $('#price_desc').html("$" + total_price.toFixed(2));        
-
-      // turn off subscription form values
-      $('form#buy-subscription [name=sub_frequency]').val('');
-      $('form#buy-subscription [name=sub_startdate]').val('');
-      $('form#buy-subscription [name=sub_enddate]').val('');
-
+      $('#price_desc').html('TBD, depending on your selections.');
     }
     
     // set the form values    
@@ -145,24 +146,32 @@ bb.subscription = (function() {
       //console.log('Processing order...');
       var whofor = '';
       
-      if ($('a#subfor_gift').hasClass('picked')) {
-        whofor = $('#whofor input').val();
-        $('form#buy-subscription [name=shipto]').val(whofor);   
+      // validate that all selections have been made
+
+      if ($('.choice1').hasClass('picked') && $('.choice2').hasClass('picked') && $('.choice3').hasClass('picked') && $('.choice4').hasClass('picked')) {
+        if ($('a#subfor_gift').hasClass('picked')) {
+          whofor = $('#whofor input').val();
+          $('form#buy-subscription [name=shipto]').val(whofor);   
+        } else {
+          $('form#buy-subscription [name=shipto]').val('');           
+        }
+
+        // add the barware caboodle if it's selected.
+        if ($('a#substart_yes').hasClass('picked')) {
+          // get the URL https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto=bob&category=DEFAULT&code=CABOODLE
+          var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-CABOODLE' +fcc.session_get()+'&output=json&callback=?';
+          $.getJSON(carturl, function(data) {
+            // callback function goes here
+          });
+        }
+
+        // submit the form
+        $('form#buy-subscription').submit(); 
       } else {
-        $('form#buy-subscription [name=shipto]').val('');           
+        //alert('Before we add your subscription to the cart, please make all selections.');
+        $('#myModal').html('Before we add your subscription to the cart, please make all selections.<a class="close-reveal-modal">&#215;</a>');
+        $('#myModal').foundation('reveal', 'open');
       }
-
-      // add the barware caboodle if it's selected.
-      if ($('a#substart_yes').hasClass('picked')) {
-        // get the URL https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto=bob&category=DEFAULT&code=CABOODLE
-        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-CABOODLE' +fcc.session_get()+'&output=json&callback=?';
-        $.getJSON(carturl, function(data) {
-          // callback function goes here
-        });
-      }
-
-      // submit the form
-      $('form#buy-subscription').submit(); 
   }
 
   return {

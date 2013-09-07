@@ -103,7 +103,11 @@
 			<div class="row">
 				<div class="large-12 column subscribe-top">
 					<h1><?php echo $product_title; ?></h1>
-					<p><?php echo $product_description; ?></p>
+					<p>
+						<?php echo $product_description; ?>
+						<br />
+						$<?php echo $price_per_month; ?> / month
+					</p>
 				</div>
 			</div>
 
@@ -114,8 +118,8 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
-							<li><a id='subfor_me' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=me&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand  <?php echo $subfor=='me' ? 'picked' : ''; ?>">This is for Me </a></li>
-							<li><a id='subfor_gift' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=gift&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand  <?php echo $subfor=='gift' ? 'picked' : ''; ?>">This is a Gift </a></li>
+							<li><a id='subfor_me' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=me&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice1 medium secondary button expand  <?php echo $subfor=='me' ? 'picked' : ''; ?>">This is for Me </a></li>
+							<li><a id='subfor_gift' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=gift&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice1 medium secondary button expand  <?php echo $subfor=='gift' ? 'picked' : ''; ?>">This is a Gift </a></li>
 						</ul>
 						<div id='whofor' class='<?php echo $subfor=='gift' ? '' : 'hide'; ?>'>
 							<h5>What is the name of the recipient?</h5>
@@ -130,8 +134,8 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
-							<li><a id='subfreq_monthly' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=monthly&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subfreq=='monthly' ? 'picked' : ''; ?>">Monthly</a></li>
-							<li><a id='subfreq_once' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=once&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subfreq=='once' ? 'picked' : ''; ?>">Pay Once</a></li>
+							<li><a id='subfreq_monthly' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=monthly&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice2 medium secondary button expand <?php echo $subfreq=='monthly' ? 'picked' : ''; ?>">Monthly</a></li>
+							<li><a id='subfreq_once' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=once&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice2 medium secondary button expand <?php echo $subfreq=='once' ? 'picked' : ''; ?>">Pay Once</a></li>
 						</ul>
 					</div>
 				</div>		
@@ -142,10 +146,10 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-4 months">
-							<li><a id='subduration_3' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subduration=='3' ? 'picked' : ''; ?>">3 Months</a></li>
-							<li><a id='subduration_6' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=6&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subduration=='6' ? 'picked' : ''; ?>">6 Months</a></li>
-							<li><a id='subduration_12' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=12&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subduration=='12' ? 'picked' : ''; ?>">12 Months</a></li>
-							<li><a id='subduration_inf' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=inf&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $subduration=='inf' ? 'picked' : ''; ?> <?php echo $subfreq=='once' ? 'disabled' : ''; ?>">∞</a></li>
+							<li><a id='subduration_3' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='3' ? 'picked' : ''; ?>">3 Months</a></li>
+							<li><a id='subduration_6' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=6&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='6' ? 'picked' : ''; ?>">6 Months</a></li>
+							<li><a id='subduration_12' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=12&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='12' ? 'picked' : ''; ?>">12 Months</a></li>
+							<li><a id='subduration_inf' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=inf&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='inf' ? 'picked' : ''; ?> <?php echo $subfreq=='once' ? 'disabled' : ''; ?>">∞</a></li>
 						</ul>
 					</div>
 				</div>
@@ -156,8 +160,8 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
-							<li><a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need bar tools.</a></li>
-							<li><a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need bar tools.</a></li>
+							<li><a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need bar tools.</a></li>
+							<li><a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need bar tools.</a></li>
 						</ul>
 					</div>
 				</div>	
@@ -172,8 +176,13 @@
 						<div id='price_desc'>
 						<?php if ($subfreq == 'once') { ?>
 							$<?php echo number_format($foxy_price,2); ?>
+						<?php } elseif ($subfreq == 'monthly') { ?>
+							$<?php echo number_format($price_per_month,2); ?> / month 
+							<?php if ($subduration == 'inf' || is_numeric($subduration)) { ?>
+								<?php echo $subduration == 'inf' ? 'until you cancel' : 'for ' .$subduration. ' months'; ?> 
+							<?php } ?>
 						<?php } else { ?>
-							$<?php echo number_format($price_per_month,2); ?> / month <?php echo $subduration == 'inf' ? 'until you cancel' : 'for ' .$subduration. ' months'; ?> 
+							TBD, depending on your selections.
 						<?php } ?>
 						<br />
 						</div>
