@@ -39,6 +39,9 @@
 			<h6>The bar you need for the drinks you love</h6>
 <!-- SnapWidget -->
 <iframe src="http://snapwidget.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MjIwfDR8MXx8bm98NXxub25lfG9uU3RhcnR8eWVz&v=6913" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:900px; height: 225px" ></iframe>
+			<a href="http://instagram.com/bittersandbottles/">
+				<img style='padding-bottom: 20px;' src="img/instagram.png" alt="Follow @BittersAndBottles on Instagram" title="Follow @BittersAndBottles on Instagram" />
+			</a>
 		</div>
 	</div>
 	
