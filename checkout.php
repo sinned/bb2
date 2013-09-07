@@ -42,6 +42,10 @@ switch ($_SERVER['SERVER_NAME']) {
 		/* END CUSTOM LOCATION LOGIC */
  
 		FC.locations.updateFoxyComplete(true);
+
+		/* Change "Future Subscriptions" to "Charged Monthly */
+		$('.fc_future_subscriptions label').html('Charged as Shipped Monthly');
+		$('tr#fc_cart_foot_subscriptions td.fc_col1').html('Charged as Shipped Monthly');
 	});
 	//]]>
 </script>
