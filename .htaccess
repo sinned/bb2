@@ -6,5 +6,5 @@ RewriteRule terms/ blog/terms/ [L]
 RewriteRule privacy/ blog/privacy/ [L]
 RewriteRule about-us/ blog/about-us/ [L]
 RewriteRule faq/ blog/faq/ [L]
-RewriteRule contact/ contact.php [L]
+RewriteRule contact/ blog/contact/ [L]
 </IfModule>
