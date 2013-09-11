@@ -14,14 +14,7 @@
 	<div class="row">
 		<div id="marquee" class="large-12 column">
 			<img src="img/your-home-bar-delivered.jpg" alt="Your Home Bar, Delivered" />
-		</div>
-	</div>
-	<div class="row">
-		&nbsp;
-	</div>
-	<div class="row">
-		<div class="large-12 column text-center">
-			<h4>Now shipping to California &amp; New York only.</h4>
+			<p class="right"><small>Now serving California and New York.</small></p>
 		</div>
 	</div>
 	<div class="row">
