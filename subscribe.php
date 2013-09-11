@@ -42,7 +42,7 @@
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
-			$product_description = "Build your home bar<br />Receive, sip, and discover a rare spirit every month<br />Let us be your spirit guide";
+			$product_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus quis nunc ut hendrerit. Integer sit amet mauris fringilla tellus scelerisque aliquet ac egestas metus. Fusce dignissim molestie turpis, non venenatis elit iaculis et. Nulla at faucibus neque, quis ornare arcu. Fusce elementum ligula est, bibendum porta tellus lacinia ut. Mauris venenatis arcu et vestibulum auctor. Nulla elementum enim non mi faucibus pretium. Cras ultrices commodo rutrum. Nullam nec sapien scelerisque, condimentum mi at, commodo sapien.";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
