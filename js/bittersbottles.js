@@ -5,8 +5,13 @@ bb.subscription = (function() {
   function init() {
     console.log('initing subscription form', price_per_month);
 
+    // set the right column to the same height as the left
+    $("#subscription-right").height($("#subscription-left").height());
+
     $('.show-subscription-choices button').click(function(e) { 
-      $('.subscription-choices').show('fast');
+      $('.subscription-choices').show('fast', function () {
+        $("#subscription-right").height($("#subscription-left").height());
+      });
       $('.show-subscription-choices').hide();
       _gaq.push(['_trackPageview', '/' + subscription_type + '/subscribe/']);
       ga('send', 'pageview', '/' + subscription_type + '/subscribe/');

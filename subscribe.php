@@ -115,7 +115,7 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<div class="row">
-		<div class="large-8 small-12 column">
+		<div id="subscription-left" class="large-8 small-12 column">
 			<div class="row">
 				<div class="large-12 column subscribe-top">
 					<h1><?php echo $product_title; ?></h1>
@@ -255,8 +255,8 @@
 		</div>
 
 
-		<div class="large-4 hide-for-small column">
-			<h5 class='sidebar-<?php echo $subtype; ?>'></h5>
+		<div id="subscription-right" class="large-4 hide-for-small column sidebar-<?php echo $subtype; ?>">
+
 		</div>
 	</div>	
 

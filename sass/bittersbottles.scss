@@ -64,14 +64,15 @@ h4.has-tip {
 	text-transform: uppercase;
 }
 
+.full-height {
+}
+
 .sidebar-cocktails {
-	height: 572px;
-	background: url('../img/cocktails-sidebar.jpg');
+	background: url('../img/cocktails-sidebar.jpg') repeat-y;
 }
 
 .sidebar-spirits {
-	height: 572px;	
-	background: url('../img/spirits.jpg');
+	background: url('../img/spirits.jpg') repeat-y;
 }
 
 .opaque {
