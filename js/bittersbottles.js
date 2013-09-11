@@ -5,6 +5,11 @@ bb.subscription = (function() {
   function init() {
     console.log('initing subscription form', price_per_month);
 
+    $('.show-subscription-choices button').click(function(e) { 
+      $('.subscription-choices').show('fast');
+      $('.show-subscription-choices').hide();
+    });
+
     $('.subscription-choices a').click(function(e) {
       e.preventDefault();
 

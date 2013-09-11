@@ -35,7 +35,7 @@
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
-			$product_description = "Build your home bar<br />Receive monthly deliveries with the bottled ingredients for 4 classic cocktails<br />Master the recipes to take you from grasshopper to sensei";
+			$product_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus quis nunc ut hendrerit. Integer sit amet mauris fringilla tellus scelerisque aliquet ac egestas metus. Fusce dignissim molestie turpis, non venenatis elit iaculis et. Nulla at faucibus neque, quis ornare arcu. Fusce elementum ligula est, bibendum porta tellus lacinia ut. Mauris venenatis arcu et vestibulum auctor. Nulla elementum enim non mi faucibus pretium. Cras ultrices commodo rutrum. Nullam nec sapien scelerisque, condimentum mi at, commodo sapien.";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
@@ -111,7 +111,23 @@
 				</div>
 			</div>
 
-			<div class="subscription-choices">
+			<div class="show-subscription-choices">
+				<div class="row">
+					<div class="large-12 small=12 column text-center">
+						<h3>Ready to buy?</h3>
+						<button class="button success">Get Started Now.</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="subscription-choices hide">
+				<div class="row">
+					<div class="large-12 column text-center" />
+						<h3>Please make your selections:</h3>
+						<br />
+					</div>
+				</div>
+
 				<div class="row">
 					<div class="large-1 column hide-for-small ">
 						<h4>1</h4>
@@ -165,14 +181,12 @@
 						</ul>
 					</div>
 				</div>	
-			</div>
 
-			<div class="row">
-				<div class="large-2 column">
-					<h3>Price:</h3>
-				</div>
-				<div class="small-12 large-10 column price_description">
-					<p>
+				<div class="row" style="margin: 10px 0;">
+					<div class="large-2 column">
+						Price:
+					</div>
+					<div class="large-10 column price_description">
 						<div id='price_desc'>
 						<?php if ($subfreq == 'once') { ?>
 							$<?php echo number_format($foxy_price,2); ?>
@@ -184,33 +198,46 @@
 						<?php } else { ?>
 							TBD, depending on your selections.
 						<?php } ?>
-						<br />
 						</div>
 						<div id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
 							$20 for the barware caboodle in the first shipment
 						</div>
-					</p>
+					</div>
+				</div>
+				<div class="row" style="margin: 10px 0;">
+					<div class="large-2 column">
+							Ships:
+					</div>
+					<div class="large-10 column price_description">
+							<div>
+								First Shipment: 2nd Week of October
+							</div>
+						</p>
+					</div>
+				</div>				
+
+				<div class="row">
+					<div class="large-12 column">
+						<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">
+						<input type="hidden" name="name" value="<?php echo $product_name; ?>" />
+						<input type="hidden" name="category" value="SUBSCRIPTION" />
+						<input type="hidden" name="price" value="<?php echo $foxy_price; ?>" />
+						<input type="hidden" name="code" value="<?php echo $foxy_product_code; ?>" />
+						<input type="hidden" name="sub_frequency" value="<?php echo $foxy_subscription_frequency; ?>" />
+						<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
+						<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
+						<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
+						<!-- <input type="hidden" name="empty" value="true" /> -->
+						</form>				
+						<a id="subscribe-process" href="#" class='button large expand'>Add to Cart</a>
+
+					</div>	
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="large-12 column">
-					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">
-					<input type="hidden" name="name" value="<?php echo $product_name; ?>" />
-					<input type="hidden" name="category" value="SUBSCRIPTION" />
-					<input type="hidden" name="price" value="<?php echo $foxy_price; ?>" />
-					<input type="hidden" name="code" value="<?php echo $foxy_product_code; ?>" />
-					<input type="hidden" name="sub_frequency" value="<?php echo $foxy_subscription_frequency; ?>" />
-					<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
-					<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
-					<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
-					<!-- <input type="hidden" name="empty" value="true" /> -->
-					</form>				
-					<a id="subscribe-process" href="#" class='button large expand'>Add to Cart</a>
-
-				</div>	
-			</div>
 		</div>
+
+
 		<div class="large-4 hide-for-small column">
 			<h5 class='sidebar-<?php echo $subtype; ?>'></h5>
 		</div>
