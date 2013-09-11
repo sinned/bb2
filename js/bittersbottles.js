@@ -8,6 +8,7 @@ bb.subscription = (function() {
     $('.show-subscription-choices button').click(function(e) { 
       $('.subscription-choices').show('fast');
       $('.show-subscription-choices').hide();
+      _gaq.push(['_trackPageview', '/' + subscription_type + '/subscribe/']);
       ga('send', 'pageview', '/' + subscription_type + '/subscribe/');
     });
 
