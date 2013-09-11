@@ -57,14 +57,30 @@
 		default:
 			$foxy_price = $price_per_month;
 			$foxy_subscription_frequency = '1m';
-			$foxy_sub_startdate = '15';
+
+			// figure out subscription start
+			$today = strtotime("now");
+
+			// if it's after the 10th, then start it next month.
+			$dayofmonth_today = date('j', $today);
+			if ($dayofmonth_today > 10) {
+				$next_month = strtotime("now +1month");
+				$subscription_starttimestring = date("F ", $next_month) . date("10, Y", $today);
+			} else {
+				$subscription_starttimestring = date("F 10, Y", $today);
+			}
+
+			$subscription_starttimestamp = strtotime($subscription_starttimestring);
+
+
+			$foxy_sub_startdate = '10';
 			switch ($subduration) {
 				case '3':
 				case '6':
 				case '9':
 				case '12':
 					$monthend = $subduration - 1; // subtract 1 from the months to get the right month to end in.
-					$subscription_endtimestamp = strtotime("today +$monthend months");
+					$subscription_endtimestamp = strtotime("$subscription_starttimestamp +$monthend months");
 					$foxy_sub_enddate = date('Ym16', $subscription_endtimestamp);
 				break;		
 				case 'inf':
@@ -182,12 +198,12 @@
 					</div>
 				</div>	
 
-				<div class="row" style="margin: 10px 0;">
+				<div class="row">
 					<div class="large-2 column">
-						Price:
+						<p>Price:</p>
 					</div>
 					<div class="large-10 column price_description">
-						<div id='price_desc'>
+						<p id='price_desc'>
 						<?php if ($subfreq == 'once') { ?>
 							$<?php echo number_format($foxy_price,2); ?>
 						<?php } elseif ($subfreq == 'monthly') { ?>
@@ -198,20 +214,21 @@
 						<?php } else { ?>
 							TBD, depending on your selections.
 						<?php } ?>
-						</div>
-						<div id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
+						</p>
+						<p id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
 							$20 for the barware caboodle in the first shipment
-						</div>
+						</p>
 					</div>
 				</div>
-				<div class="row" style="margin: 10px 0;">
+				<div class="row">
 					<div class="large-2 column">
-							Ships:
+							<p>
+								Ships:
+							</p>
 					</div>
 					<div class="large-10 column price_description">
-							<div>
-								First Shipment: 2nd Week of October
-							</div>
+						<p>
+							2nd week of <?php echo date('F', strtotime($subscription_starttimestring)); ?>
 						</p>
 					</div>
 				</div>				

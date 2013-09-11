@@ -73,10 +73,21 @@ bb.subscription = (function() {
     var d = today.getDate();
     var m = today.getMonth();
     var y = today.getFullYear();  
-    var enddate= new Date(y, m+sub_duration, 16);
+    var startdate;
+
+    // if it's after the 10th, then start on the next month.
+    if (d > 10) {
+      if (m == 12) {
+        m = 1;
+      } else {
+        m = m + 1;
+      }
+    }
+
+    var enddate= new Date(y, m+sub_duration-1, 16);
     var enddate_string =enddate.getFullYear();
     enddate_string += ("0" + String(enddate.getMonth()+1)).slice(-2); // to make a 2 digit month string add a 0 and then slice the last 2 characters.
-    enddate_string += "16"; // finish the subscription on the 16th.
+    enddate_string += "11"; // finish the subscription on the 11th.
     return enddate_string;
   }
 
@@ -113,7 +124,7 @@ bb.subscription = (function() {
       product_code += '-MONTHLY';
       // turn on subscription form values
       $('form#buy-subscription [name=sub_frequency]').val('1m');
-      $('form#buy-subscription [name=sub_startdate]').val('15'); // start on the 15th of the month
+      $('form#buy-subscription [name=sub_startdate]').val('10'); // start on the 10th of the month
       
       if ($('a#subduration_3').hasClass('picked')) {
         months_paid = 3;

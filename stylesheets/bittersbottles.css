@@ -21,8 +21,7 @@ strong {
 
 .subscription-choices p {
   margin: 0;
-  line-height: 1em;
-  font-size: .7em; }
+  padding: 0; }
 
 .subscription-choices li {
   margin: 0;
