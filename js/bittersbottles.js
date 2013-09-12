@@ -8,7 +8,7 @@ bb.subscription = (function() {
     // set the right column to the same height as the left
     var leftheight = $("#subscription-left").height();
     // each row of bottles is 192 high, so snap to each 192 with the remainder.
-    var rightheight = Math.floor(leftheight / 192) * 192 ;
+    var rightheight = Math.ceil(leftheight / 192) * 192 ;
     $("#subscription-right").height(rightheight);
 
     $('.show-subscription-choices button').click(function(e) { 
@@ -16,7 +16,7 @@ bb.subscription = (function() {
           // set the right column to the same height as the left
           var leftheight = $("#subscription-left").height();
           // each row of bottles is 192 high, so snap to each 192 with the remainder.
-          var rightheight = Math.floor(leftheight / 192) * 192 ;
+          var rightheight = Math.ceil(leftheight / 192) * 192 ;
           $("#subscription-right").height(rightheight);
       });
       $('.show-subscription-choices').hide();
