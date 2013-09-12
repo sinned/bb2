@@ -6,7 +6,13 @@ bb.subscription = (function() {
     console.log('initing subscription form', price_per_month);
 
     // set the right column to the same height as the left
-    $("#subscription-right").height($("#subscription-left").height());
+    var leftheight = $("#subscription-left").height();
+
+    // each row of bottles is 193 high, so snap to each 193 with the remainder.
+    var rightheight = Math.floor(leftheight / 193) * 193 ;
+    console.log('leftheight: ', leftheight, ' rightheight: ', rightheight);
+
+    $("#subscription-right").height(rightheight);
 
     $('.show-subscription-choices button').click(function(e) { 
       $('.subscription-choices').show('fast', function () {
