@@ -22,10 +22,10 @@
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
-			<a href="cocktails/"><img src="img/cocktails-distressed.jpg" alt="Mix Cocktails" /></a>
+			<a href="cocktails/"><img src="img/cocktails-promo.jpg" alt="Mix Cocktails" /></a>
 		</div>
 		<div class="large-6 small-6 column card">
-			<a href="spirits/"><img src="img/spirits-distressed.jpg" alt="Discover Spirits" /></a>
+			<a href="spirits/"><img src="img/spirits-promo.jpg" alt="Discover Spirits" /></a>
 		</div>
 	</div>
 
