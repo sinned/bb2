@@ -14,6 +14,8 @@ switch ($_SERVER['SERVER_NAME']) {
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/orbit.css">
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/bittersbottles.css" />
 
+<link rel="icon" type="image/png" href="<?php echo WEBROOT; ?>favicon.png">
+
 <script src="<?php echo WEBROOT; ?>js/vendor/custom.modernizr.js"></script>
 
 <!-- BEGIN FOXYCART FILES -->

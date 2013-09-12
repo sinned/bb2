@@ -13,14 +13,14 @@
 	</div>
 
 
-  <div id="ageModal" class="reveal-modal">
+  <div id="ageModal" class="reveal-modal medium">
     <img src="img/bb-logo.png" alt="Bitters+Bottles" />
     <h3>Are you over 21 years of age?</h3>
     <a href="#" class="button">Yes</a>
     <a href="#" class="button">No</a>
 
   </div>
-  <div id="subModal" class="reveal-modal">
+  <div id="subModal" class="reveal-modal medium">
     <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
     <?php include "mailchimp-form.php"; ?>
     <p class="right" style="font-size:12px;">
@@ -28,14 +28,14 @@
     </p>
 
   </div>
-  <div id="thxModal" class="reveal-modal">
+  <div id="thxModal" class="reveal-modal medium">
     <h2>Thanks for signing up!</h2>
     <h3>Please check your email and click on the confirmation link.</h3>
     <h3>Welcome to Bitters+Bottles.</h3>
     <p>        <a class="button close-sub" href="#">Onward! &gt;&gt;</a></p>
     <a class="close-reveal-modal">&#215;</a>
   </div>
-  <div id="myModal" class="reveal-modal"></div>
+  <div id="myModal" class="reveal-modal medium"></div>
 
   <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>  
   <script src="<?php echo WEBROOT; ?>js/foundation.min.js"></script>
