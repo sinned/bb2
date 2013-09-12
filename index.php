@@ -14,7 +14,7 @@
 	<div class="row">
 		<div id="marquee" class="large-12 column">
 			<img src="img/your-home-bar-delivered.jpg?cb=1" alt="Your Home Bar, Delivered" />
-			<p class="right"><small>Now serving California and New York.</small></p>
+			<p class="right"><small>Now serving California <img src="<?php echo WEBROOT; ?>img/plus.png" alt="+" width="10" style="margin-bottom:3px;" />  New York.</small></p>
 		</div>
 	</div>
 	<div class="row">
