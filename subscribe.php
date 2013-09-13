@@ -35,14 +35,14 @@
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
-			$product_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus quis nunc ut hendrerit. Integer sit amet mauris fringilla tellus scelerisque aliquet ac egestas metus. Fusce dignissim molestie turpis, non venenatis elit iaculis et. Nulla at faucibus neque, quis ornare arcu. Fusce elementum ligula est, bibendum porta tellus lacinia ut. Mauris venenatis arcu et vestibulum auctor. Nulla elementum enim non mi faucibus pretium. Cras ultrices commodo rutrum. Nullam nec sapien scelerisque, condimentum mi at, commodo sapien.";
+			$product_description = "Making drinks isn’t about mixology. It’s about hospitality.<br /><br />Time to invite some friends over.<br /><br />The perfect drink is well-balanced and simple, made from fine ingredients. <br /><br />We’ve gone to the trouble of putting it all in a box for you.  And by &ldquo;it all&rdquo; we mean full sized bottles of spirits, recipes for several cocktails, and the history of what makes those cocktails just so damned classic.<br /><br />It’s nothing too complicated, just all the elements you need to craft one new classic cocktail each month.";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
-			$product_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus quis nunc ut hendrerit. Integer sit amet mauris fringilla tellus scelerisque aliquet ac egestas metus. Fusce dignissim molestie turpis, non venenatis elit iaculis et. Nulla at faucibus neque, quis ornare arcu.  Nunc rhoncus quis nunc ut hendrerit. Integer sit amet mauris fringilla tellus scelerisque aliquet ac egestas metus. <br /> Fusce dignissim molestie turpis, non venenatis elit iaculis et. Nulla at faucibus neque, quis ornare arcu. <br /> 	Fusce elementum ligula est, bibendum porta tellus lacinia ut. <br /> Mauris venenatis arcu et vestibulum auctor. <br /> Nulla elementum enim non mi faucibus pretium. Cras ultrices commodo rutrum. Nullam nec sapien scelerisque, condimentum mi at, commodo sapien.";
+			$product_description = "What do we say when we discover a rare spirit?<br /><br />Neat.<br /><br />Each month, let us send you a full sized bottle of something you may not have seen before.<br /><br />Something to sip and savor. <br /><br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.<br /><br />Let our spirits be your guide.";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
@@ -121,7 +121,7 @@
 					<h1><?php echo $product_title; ?></h1>
 					<p>
 						<?php echo $product_description; ?>
-						<br />
+						<br /><br />
 						$<?php echo $price_per_month; ?> / month
 					</p>
 				</div>
@@ -216,7 +216,7 @@
 						<?php } ?>
 						</p>
 						<p id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
-							$20 for the barware caboodle in the first shipment
+							$20 for the bar tools kit in the first shipment
 						</p>
 					</div>
 				</div>
