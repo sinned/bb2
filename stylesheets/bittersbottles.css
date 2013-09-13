@@ -7,7 +7,7 @@ ul.pluslist {
 
 ul.pluslist li {
   padding-left: 15px;
-  background: url("/bb2/img/plus.png") no-repeat top left;
+  background: url("../img/plus.png") no-repeat top left;
   background-size: 10px 10px;
   background-position: 0px 8px; }
 
