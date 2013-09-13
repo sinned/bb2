@@ -76,3 +76,13 @@ h4.has-tip {
 #ageModal input {
   max-width: 300px;
   margin: auto; }
+
+.shop img {
+  max-height: 100px;
+  max-width: 100px;
+  margin: 10px; }
+
+.shop td {
+  padding: 10px;
+  min-height: 200px;
+  text-align: center; }
