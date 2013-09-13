@@ -14,8 +14,8 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Antic Slab", Times, serif;
-  font-weight: normal;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 300;
   font-style: normal;
   line-height: 1;
   position: relative; }
@@ -1111,8 +1111,8 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Abel", Palatino, sans-serif;
-  font-weight: bold;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;

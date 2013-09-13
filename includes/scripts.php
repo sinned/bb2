@@ -7,7 +7,7 @@ switch ($_SERVER['SERVER_NAME']) {
 		define('WEBROOT', '/');
 }
 ?>
-<link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Antic+Slab' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
 
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/app.css" />

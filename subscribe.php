@@ -35,7 +35,6 @@
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
-			$product_description = "Making drinks isn’t about mixology. It’s about hospitality.<br />Time to invite some friends over.<br />The perfect drink is well-balanced and simple, made from fine ingredients. <br />We’ve gone to the trouble of putting it all in a box for you.  And by &ldquo;it all&rdquo; we mean full sized bottles of spirits, recipes for several cocktails, and the history of what makes those cocktails just so damned classic.<br />It’s nothing too complicated, just all the elements you need to craft one new classic cocktail each month.";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
@@ -43,7 +42,6 @@
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
-			$product_description = "What do we say when we discover a rare spirit?<br />Neat.<br />Each month, let us send you a full sized bottle of something you may not have seen before.<br />Something to sip and savor. <br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.<br />Let our spirits be your guide.";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
@@ -121,10 +119,34 @@
 			<div class="row">
 				<div class="large-12 column subscribe-top">
 					<h1><?php echo $product_title; ?></h1>
-					<p>
-						<?php echo $product_description; ?>
-						<br /><br />
-						$<?php echo $price_per_month; ?> / month
+						<?php if ($subtype == 'cocktails') { ?>
+							<h2>Making drinks isn’t about mixology. It’s about hospitality.</h2> 
+							<h2>Time to invite some friends over.</h2>
+							<p>
+								The perfect drink is well-balanced and simple, made from fine ingredients. 
+								We’ve gone to the trouble of putting it all in a box for you.  
+							</p>
+							<p>
+								And by &ldquo;it all&rdquo; we mean:
+								<ul class="pluslist">
+									<li>full sized bottles of spirits</li>
+									<li>recipes for several cocktails</li>
+									<li>and the history of what makes those cocktails just so damned classic.</li>
+								</ul>
+								It’s nothing too complicated, just all the elements you need to craft one new classic cocktail each month.
+							</p>
+						<?php } else { ?>
+							<h2>What do we say when we discover a rare spirit?</h2>
+							<h2>Neat.</h2>
+							<p>
+									Each month, let us send you a full sized bottle of something you may not have seen before.
+								<br />Something to sip and savor. 
+								<br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.
+								<br />Let our spirits be your guide.
+							</p>
+						<?php } ?>
+						<hr />
+						<h4>$<?php echo $price_per_month; ?> / month</h4>
 					</p>
 				</div>
 			</div>
@@ -132,7 +154,6 @@
 			<div class="show-subscription-choices">
 				<div class="row">
 					<div class="large-12 small=12 column text-center">
-						<h3>Ready to buy?</h3>
 						<button class="button success">Get Started Now.</button>
 					</div>
 				</div>

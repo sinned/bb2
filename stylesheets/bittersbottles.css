@@ -1,14 +1,27 @@
+p {
+  font-weight: 300; }
+
+ul.pluslist {
+  margin: -10px 0 20px 30px;
+  list-style: none; }
+
+ul.pluslist li {
+  padding-left: 15px;
+  background: url("/bb2/img/plus.png") no-repeat top left;
+  background-size: 10px 10px;
+  background-position: 0px 8px; }
+
+h2 {
+  font-family: 'Antic Slab', Times, serif;
+  font-size: 1em; }
+
 .bbplus {
   color: #c01e2e;
   font-family: arial;
   font-weight: bold; }
 
 strong {
-  font-family: Tahoma, serif;
-  font-weight: bold; }
-
-.subscribe-top {
-  text-align: center; }
+  font-weight: 700; }
 
 .subscribe-top h1 {
   text-transform: uppercase; }

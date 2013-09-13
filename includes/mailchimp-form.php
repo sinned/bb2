@@ -7,7 +7,7 @@
 </style>
 <div id="mc_embed_signup">
 <form action="http://bittersandbottles.us7.list-manage.com/subscribe/post?u=6b7a97b26106dc31cd32d56b0&amp;id=9eafd3aa24" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<h2>Would you like to subscribe to our email list?</h2>
+	<h2 style='font-weight:300;'>Would you like to subscribe to our email list?</h2>
 <div class="mc-field-group">
 	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
