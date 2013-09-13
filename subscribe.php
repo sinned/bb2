@@ -35,17 +35,19 @@
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
-			$product_description = "Making drinks isn’t about mixology. It’s about hospitality.<br /><br />Time to invite some friends over.<br /><br />The perfect drink is well-balanced and simple, made from fine ingredients. <br /><br />We’ve gone to the trouble of putting it all in a box for you.  And by &ldquo;it all&rdquo; we mean full sized bottles of spirits, recipes for several cocktails, and the history of what makes those cocktails just so damned classic.<br /><br />It’s nothing too complicated, just all the elements you need to craft one new classic cocktail each month.";
+			$product_description = "Making drinks isn’t about mixology. It’s about hospitality.<br />Time to invite some friends over.<br />The perfect drink is well-balanced and simple, made from fine ingredients. <br />We’ve gone to the trouble of putting it all in a box for you.  And by &ldquo;it all&rdquo; we mean full sized bottles of spirits, recipes for several cocktails, and the history of what makes those cocktails just so damned classic.<br />It’s nothing too complicated, just all the elements you need to craft one new classic cocktail each month.";
 			$right_img_url = "/img/cocktails_right.jpg";
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
+			$starterkit = "bar tools";
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
-			$product_description = "What do we say when we discover a rare spirit?<br /><br />Neat.<br /><br />Each month, let us send you a full sized bottle of something you may not have seen before.<br /><br />Something to sip and savor. <br /><br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.<br /><br />Let our spirits be your guide.";
+			$product_description = "What do we say when we discover a rare spirit?<br />Neat.<br />Each month, let us send you a full sized bottle of something you may not have seen before.<br />Something to sip and savor. <br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.<br />Let our spirits be your guide.";
 			$right_img_url = "/img/spirits_right.jpg";			
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
+			$starterkit = "barware";
 		break;
 	}
 
@@ -192,8 +194,8 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
-							<li><a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need bar tools.</a></li>
-							<li><a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need bar tools.</a></li>
+							<li><a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need <?php echo $starterkit; ?>.</a></li>
+							<li><a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need <?php echo $starterkit; ?>.</a></li>
 						</ul>
 					</div>
 				</div>	
@@ -216,7 +218,7 @@
 						<?php } ?>
 						</p>
 						<p id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
-							$20 for the bar tools kit in the first shipment
+							$20 for the <?php echo $starterkit; ?> kit in the first shipment
 						</p>
 					</div>
 				</div>

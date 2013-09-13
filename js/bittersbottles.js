@@ -186,13 +186,20 @@ bb.subscription = (function() {
           $('form#buy-subscription [name=shipto]').val('');           
         }
 
-        // add the barware caboodle if it's selected.
+        // add the starter kit if it's selected.
         if ($('a#substart_yes').hasClass('picked')) {
-          // get the URL https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto=bob&category=DEFAULT&code=CABOODLE
-          var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Caboodle&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-CABOODLE' +fcc.session_get()+'&output=json&callback=?';
-          $.getJSON(carturl, function(data) {
-            // callback function goes here
-          });
+          var carturl = '';
+          if (subscription_type == 'cocktails') {
+            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=20&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+          } else if (subscription_type == 'spirits') {
+            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Starter+Kit&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+          }
+
+          if (carturl != '') {
+            $.getJSON(carturl, function(data) {
+              // callback function goes here
+            });            
+          }
         }
 
         // submit the form
