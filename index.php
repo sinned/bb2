@@ -13,7 +13,7 @@
 	<?php include "includes/header.php"; ?>
 	<div class="row">
 		<div id="marquee" class="large-12 column">
-			<img src="img/your-home-bar-delivered.jpg?cb=1" alt="Your Home Bar, Delivered" />
+			<img src="img/your-home-bar-delivered.jpg" title="Your Home Bar, Delivered" alt="Your Home Bar, Delivered" />
 			<p class="right"><small>Now serving California <span class="bbplus">+</span> New York.</small></p>
 		</div>
 	</div>
