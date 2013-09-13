@@ -26,7 +26,7 @@
 						<form action="https://bittersandbottles.foxycart.com/cart" method="post">
 							<input type="hidden" name="name" value="Bulleit Bourbon" />
 							<input type="hidden" name="price" value="25.00" />
-							<inpyt type="hidden" name="image" value="<?php echo WEBROOT; ?>img/shop/bulleit-bourbon.jpg" />
+							<inpyt type="hidden" name="image" value="http://www.bittersandbottles.com/img/shop/bulleit-bourbon.jpg" />
 							<input type="submit" value="Add to Cart" />
 						</form>		
 					</td>
@@ -35,7 +35,7 @@
 						<img src="<?php echo WEBROOT; ?>img/shop/diet-coke.jpg" alt="Diet Coke" />
 						<form action="https://bittersandbottles.foxycart.com/cart" method="post">
 							<input type="hidden" name="name" value="Diet Coke" />
-							<inpyt type="hidden" name="image" value="<?php echo WEBROOT; ?>img/shop/diet-coke.jpg" />				
+							<inpyt type="hidden" name="image" value="http://www.bittersandbottles.com/img/shop/diet-coke.jpg" />				
 							<input type="hidden" name="price" value="1.00" />
 							<input type="submit" value="Add to Cart" />
 						</form>				
