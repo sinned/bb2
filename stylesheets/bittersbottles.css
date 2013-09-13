@@ -1,6 +1,9 @@
 p {
   font-weight: 300; }
 
+ul {
+  margin: 0 0 10px 30px; }
+
 ul.pluslist {
   margin: -10px 0 20px 30px;
   list-style: none; }
