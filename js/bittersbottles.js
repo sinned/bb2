@@ -108,7 +108,7 @@ bb.subscription = (function() {
   function update_price() {
     var total_price;
     var product_code = '';
-    var months_paid = 1;
+    var months_paid = 0;
     var product_name;
 
     product_code += subscription_type.toUpperCase(); // start the product code
@@ -146,7 +146,7 @@ bb.subscription = (function() {
         months_paid = 6;
       } else if ($('a#subduration_12').hasClass('picked')) {
         months_paid = 12;
-      } else {
+      } else if ($('a#subduration_inf').hasClass('picked')) {
         $('#price_desc').html("$" + total_price.toFixed(2) + " / month until you cancel");
         product_code += '-INF';
         months_paid = 0;
