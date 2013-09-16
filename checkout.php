@@ -48,7 +48,7 @@ switch ($_SERVER['SERVER_NAME']) {
 		$('tr#fc_cart_foot_subscriptions td.fc_col1').html('Charged as Shipped Monthly');
 
 		/* Business Shipping Recoemmendation */
-		$('#fc_shipto_0').before('<p style="margin:10px 0;">We recommend shipping to a business address.</p>')
+		$('#fc_shipto_0').before('<p style="margin:10px 0;"><i>We recommend shipping to a business address.</i></p>')
 
 	});
 	//]]>
