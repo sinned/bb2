@@ -46,6 +46,10 @@ switch ($_SERVER['SERVER_NAME']) {
 		/* Change "Future Subscriptions" to "Charged Monthly */
 		$('.fc_future_subscriptions label').html('Charged as Shipped Monthly');
 		$('tr#fc_cart_foot_subscriptions td.fc_col1').html('Charged as Shipped Monthly');
+
+		/* Business Shipping Recoemmendation */
+		$('#fc_shipto_0').before('<p style="margin:10px 0;">We recommend shipping to a business address.</p>')
+
 	});
 	//]]>
 </script>
