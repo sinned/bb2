@@ -32,14 +32,13 @@
 		&nbsp;
 	</div>
 	<div class="row">
-		<div class="large-offset-1 large-10 column text-justify">
+		<div class="large-12 column text-justify">
 			<p>
 				Through our subscription service, Bitters + Bottles builds the bar you need, while introducing you to new spirits and cocktails each month. 
 				Each delivery builds on the previous shipments to create the complete home bar. 
 				All bottles are full sized, no mini bar here.
 			</p>
 		</div>
-		<div class="large-1 column">&nbsp;</div>
 	</div>
 
 	<?php include "includes/footer.php"; ?>
