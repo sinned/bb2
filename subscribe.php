@@ -120,7 +120,7 @@
 		<div id="subscription-left" class="large-8 small-12 column">
 			<div class="row">
 				<div class="large-12 column subscribe-top">
-					<h1><?php echo $product_title; ?></h1>
+					<h1 style="font-weight:300;"><?php echo $product_title; ?></h1>
 						<?php if ($subtype == 'cocktails') { ?>
 							<h2>Making drinks isn’t about mixology. It’s about hospitality.</h2> 
 							<h2>Time to invite some friends over.</h2>
