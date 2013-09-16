@@ -1,4 +1,5 @@
 <?php
+$notcheckout = false; // hide zepto. zepto was causing JS errors in Foxy
 switch ($_SERVER['SERVER_NAME']) {
 	case 'localhost':
 		define('WEBROOT', '/bb2/');
@@ -6,50 +7,67 @@ switch ($_SERVER['SERVER_NAME']) {
 	default:
 		define('WEBROOT', '/');
 }
-?>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Antic+Slab' rel='stylesheet' type='text/css'>
+?><!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bitters+Bottles</title>
+	<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
 
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/app.css" />
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/orbit.css">
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/bittersbottles.css" />
 
-<link rel="icon" type="image/png" href="<?php echo WEBROOT; ?>favicon.png">
-
-<script src="<?php echo WEBROOT; ?>js/vendor/custom.modernizr.js"></script>
-
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40569793-1', 'bittersandbottles.com');
-  ga('send', 'pageview');
+<script type="text/javascript" charset="utf-8">
+	if (window.location.hash.search(/utma/) == -1 && typeof(fc_json.custom_fields['ga']) != "undefined") {
+		if (fc_json.custom_fields['ga'].length > 0) {
+			window.location.hash = fc_json.custom_fields['ga'].replace( /\&amp;/g, '&' );
+		}
+	}
 </script>
-
-<?php if (!isset($notcheckout)) { ?>
 <script type="text/javascript">
-
+ 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-40569793-2']);
-  _gaq.push(['_trackPageview']);
-
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setAllowAnchor', true]);
+  _gaq.push(['_trackPageview', '/receipt']);
+ 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
+ 
 </script>
-<?php } ?>
-<!-- Bitters+Bottles Scripts -->
-<script src="<?php echo WEBROOT; ?>js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo WEBROOT; ?>js/bittersbottles.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo WEBROOT; ?>js/app.js" type="text/javascript" charset="utf-8"></script>
+ 
+^^receipt_only_begin^^
+^^analytics_google_ga_async^^
+^^receipt_only_end^^
+</head>
+<body>
+
+	<?php include "includes/header.php"; ?>
+
+	<div class="row">
+		<div class="large-12 column">
+			^^cart^^
+			^^receipt^^	
+		</div>
+	</div>
+
+	<?php include "includes/footer.php"; ?>
+</body>
+</html>

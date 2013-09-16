@@ -1,5 +1,5 @@
 <?php
-$showzepto = false; // hide zepto. zepto was causing JS errors in Foxy
+$notcheckout = false; // hide zepto. zepto was causing JS errors in Foxy
 switch ($_SERVER['SERVER_NAME']) {
 	case 'localhost':
 		define('WEBROOT', '/bb2/');
@@ -29,6 +29,41 @@ switch ($_SERVER['SERVER_NAME']) {
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
+
+<script type="text/javascript" charset="utf-8">
+	if (window.location.hash.search(/utma/) == -1 && typeof(fc_json.custom_fields['ga']) != "undefined") {
+		if (fc_json.custom_fields['ga'].length > 0) {
+			window.location.hash = fc_json.custom_fields['ga'].replace( /\&amp;/g, '&' );
+		}
+	}
+</script>
+ 
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40569793-2']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setAllowAnchor', true]);
+  _gaq.push(['_trackPageview', '/checkout']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+ 
+<script type="text/javascript" charset="utf-8">
+	function ga_tracker() {
+		if (typeof(fc_json.custom_fields['ga']) != "undefined" && jQuery('#fc_payment_method_paypal').is(":checked") == true) {
+			_gaq.push(['_trackPageview', '/paypal_payment']);
+			// setTimeout('return true;', 250); // TODO
+		}
+	}
+	FC.checkout.overload('validateAndSubmit', 'ga_tracker', null);
+</script>
 
 <script type="text/javascript" charset="utf-8">
 	//<![CDATA[
