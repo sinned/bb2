@@ -45,7 +45,9 @@
   </div>
   <div id="myModal" class="reveal-modal medium"></div>
 
-  <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>  
+  <?php if (!isset($showzepto) || $showzepto) { ?>
+  <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>
+  <?php } ?>
   <script src="<?php echo WEBROOT; ?>js/foundation.min.js"></script>
 
   <!--

@@ -1,4 +1,5 @@
 <?php
+$showzepto = false; // hide zepto. zepto was causing JS errors in Foxy
 switch ($_SERVER['SERVER_NAME']) {
 	case 'localhost':
 		define('WEBROOT', '/bb2/');
