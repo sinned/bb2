@@ -17,8 +17,8 @@
 			<p class="right"><small>Now serving California <span class="bbplus">+</span> New York.</small></p>
 		</div>
 	</div>
-	<div class="row">
-		&nbsp;
+	<div class="row text-center">
+		&nbsp;<h3>SUBSCRIPTIONS</h3>
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
@@ -26,6 +26,21 @@
 		</div>
 		<div class="large-6 small-6 column card">
 			<a href="spirits/"><img src="img/spirits-promo.jpg" alt="Discover Spirits" /></a>
+		</div>
+	</div>
+	<div class="row">
+		&nbsp;
+	</div>
+	<div class="row">
+		<div class="large-12 column">
+			<h3>How it works:</h3>
+			<p>
+				Through our subscription service, Bitters + Bottles builds the bar you need, while introducing you to new spirits and cocktails each month.  
+				<br />
+				Each delivery builds on the previous shipments to create the complete home bar.  
+				<br />
+				All bottles are full sized, no mini bar here.
+			</p>
 		</div>
 	</div>
 

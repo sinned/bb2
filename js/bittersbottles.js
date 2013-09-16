@@ -268,6 +268,7 @@ bb.age_verify = (function() {
     );
     $('.reveal-modal-bg').css('background-color','#000');
     _gaq.push(['_trackPageview', '/?verify']);
+    ga('send', 'pageview', '/?verify');
   }
 
   return {
