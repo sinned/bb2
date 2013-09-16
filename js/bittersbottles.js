@@ -267,6 +267,8 @@ bb.age_verify = (function() {
       }
     );
     $('.reveal-modal-bg').css('background-color','#000');
+    _gaq.push(['_trackPageview', window.location.pathname + '?verify']);
+    ga('send', 'pageview', window.location.pathname + '?verify');    
   }
 
   return {
