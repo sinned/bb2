@@ -21,9 +21,9 @@
 	</div>
 
 
-  <div id="ageModal" class="reveal-modal medium">
+  <div id="ageModal" class="reveal-modal small">
     <img src="img/bb-logo.png" alt="Bitters+Bottles" />
-    <h3>Are you over 21 years of age?</h3>
+    <h3 style="font-weight:300;">Are you over 21 years of age?</h3>
     <a href="#" class="button">Yes</a>
     <a href="#" class="button">No</a>
 
@@ -43,7 +43,7 @@
     <p>        <a class="button close-sub" href="#">Onward! &gt;&gt;</a></p>
     <a class="close-reveal-modal">&#215;</a>
   </div>
-  <div id="myModal" class="reveal-modal medium"></div>
+  <div id="myModal" class="reveal-modal medium text-center"></div>
 
 <?php if (!isset($notcheckout)) { ?>
   <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>
