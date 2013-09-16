@@ -28,7 +28,7 @@
     <a href="#" class="button">No</a>
 
   </div>
-  <div id="subModal" class="reveal-modal medium">
+  <div id="subModal" class="reveal-modal small">
     <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" style="width:97%"/>
     <?php include "mailchimp-form.php"; ?>
     <p class="right" style="font-size:12px;">
