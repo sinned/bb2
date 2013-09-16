@@ -190,9 +190,9 @@ bb.subscription = (function() {
         if ($('a#substart_yes').hasClass('picked')) {
           var carturl = '';
           if (subscription_type == 'cocktails') {
-            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=20&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=25&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
           } else if (subscription_type == 'spirits') {
-            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Starter+Kit&price=20&shipto='+whofor+'&category=BARGOODS&code=BARWARE-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+            carturl = 'https://bittersandbottles.foxycart.com/cart?name=Barware+Starter+Kit&price=25&shipto='+whofor+'&category=BARGOODS&code=BARWARE-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
           }
 
           if (carturl != '') {

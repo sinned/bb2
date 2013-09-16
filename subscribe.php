@@ -39,6 +39,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
 			$starterkit = "bar tools";
+			$starterkit_hover = "The essentials: jigger, strainer, shaker. ";
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
@@ -46,6 +47,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 			$starterkit = "barware";
+			$starterkit_hover = "";
 		break;
 	}
 
@@ -218,8 +220,15 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
-							<li><a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need <?php echo $starterkit; ?>.</a></li>
-							<li><a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need <?php echo $starterkit; ?>.</a></li>
+							<li>
+								<span data-tooltip class="hastip" title='<?php echo $starterkit_hover; ?>'>	
+									<a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need <?php echo $starterkit; ?>.</a></li>
+								</span>
+							<li>
+								<span data-tooltip class="hastip" title='<img src="<?php echo WEBROOT; ?>img/imogene.png" />'>
+									<a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need <?php echo $starterkit; ?>.</a>
+								</span>
+							</li>
 						</ul>
 					</div>
 				</div>	
@@ -242,7 +251,7 @@
 						<?php } ?>
 						</p>
 						<p id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
-							$20 for the <?php echo $starterkit; ?> kit in the first shipment
+							$25 for the <?php echo $starterkit; ?> kit in the first shipment
 						</p>
 					</div>
 				</div>
