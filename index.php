@@ -17,8 +17,8 @@
 			<p class="right"><small>Now serving California <span class="bbplus">+</span> New York.</small></p>
 		</div>
 	</div>
-	<div class="row text-center">
-		&nbsp;<h3>SUBSCRIPTIONS</h3>
+	<div class="row">
+		&nbsp;
 	</div>
 	<div class="row">
 		<div class="large-6 small-6 column card">
