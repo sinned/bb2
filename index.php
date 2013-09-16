@@ -33,7 +33,6 @@
 	</div>
 	<div class="row">
 		<div class="large-12 column">
-			<h3>How it works:</h3>
 			<p>
 				Through our subscription service, Bitters + Bottles builds the bar you need, while introducing you to new spirits and cocktails each month.  
 				<br />
