@@ -7,7 +7,12 @@
         <li><a href="<?php echo WEBROOT; ?>terms/">Terms of Service</a></li>
         <li><a href="<?php echo WEBROOT; ?>privacy/">Privacy</a></li>
         <li><a href="<?php echo WEBROOT; ?>contact/">Contact Us</a></li>
-        <li class="right hide-for-small">Prepared for Now.</li>
+        <li class="right hide-for-small">
+          <a class="left" href="http://instagram.com/bittersandbottles/">
+            <img style='margin-right:10px;' src="<?php echo WEBROOT; ?>img/instagram.png" alt="Follow @BittersAndBottles on Instagram" title="Follow @BittersAndBottles on Instagram" />
+          </a>
+          Prepared for Now.
+        </li>
       <ul>
 		</div>
 	</div>
