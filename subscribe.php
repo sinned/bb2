@@ -128,12 +128,15 @@
 							</p>
 							<p>
 								And by &ldquo;it all&rdquo; we mean:
+							</p>
 								<ul class="pluslist">
 									<li>full sized bottles of spirits</li>
 									<li>recipes for several cocktails</li>
 									<li>and the history of what makes those cocktails just so damned timeless.</li>
 								</ul>
-								It’s nothing too complicated, just all the elements you need to craft new classic cocktails each month.
+
+							<p>
+								Each delivery complements the previous one to create the complete home bar.  It’s nothing too complicated, just all the elements you need to craft new classic cocktails each month.
 							</p>
 						<?php } else { ?>
 							<h2>What do we say when we discover a rare spirit?</h2>
