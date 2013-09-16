@@ -39,7 +39,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Cocktails Subscription, $subduration months" : "Prepaid Cocktails Subscription, $subduration months";
 			$price_per_month = 95;
 			$starterkit = "bar tools";
-			$starterkit_hover = "The essentials: jigger, strainer, shaker. ";
+			$starterkit_hover = "The essentials: jigger, bar spoon, Hawthorne strainer, Boston shaker";
 		break;
 		case 'spirits':
 			$product_title = "Spirits";	
@@ -47,7 +47,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 			$starterkit = "barware";
-			$starterkit_hover = "4 rocks glasses";
+			$starterkit_hover = " The essentials: 4 rocks glasses and whiskey stones";
 		break;
 	}
 
@@ -251,7 +251,7 @@
 						<?php } ?>
 						</p>
 						<p id="starter_price" class='<?php echo $substart == 'yes' ? '' : 'hide'; ?>'>
-							$25 for the <?php echo $starterkit; ?> kit in the first shipment
+							$35 for the <?php echo $starterkit; ?> kit in the first shipment
 						</p>
 					</div>
 				</div>

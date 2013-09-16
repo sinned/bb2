@@ -21,6 +21,12 @@ ul.pluslist li {
   background-position: 0px 8px;
   font-weight: bold; }
 
+ul.footerlist {
+  font-size: 90%; }
+
+ul.footerlist li {
+  font-size: 90%; }
+
 h2 {
   font-family: 'Antic Slab', Times, serif;
   font-size: 1em; }

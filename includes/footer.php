@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="large-12 column">
 			<hr />
-      <ul class="inline-list">
+      <ul class="footerlist inline-list">
         <li><a href="<?php echo WEBROOT; ?>about-us/">About Us</a></li>
         <li><a href="<?php echo WEBROOT; ?>terms/">Terms of Service</a></li>
         <li><a href="<?php echo WEBROOT; ?>privacy/">Privacy</a></li>
