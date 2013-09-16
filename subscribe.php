@@ -47,7 +47,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 			$starterkit = "barware";
-			$starterkit_hover = "";
+			$starterkit_hover = "4 rocks glasses";
 		break;
 	}
 
@@ -225,7 +225,7 @@
 									<a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need <?php echo $starterkit; ?>.</a></li>
 								</span>
 							<li>
-								<span data-tooltip class="hastip" title='<img src="<?php echo WEBROOT; ?>img/imogene.png" />'>
+								<span data-tooltip class="hastip" title='<img src="<?php echo WEBROOT; ?>img/<?php echo $subtype == 'cocktails' ? "imogene" : "fletcher" ?>.png" />'>
 									<a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need <?php echo $starterkit; ?>.</a>
 								</span>
 							</li>
