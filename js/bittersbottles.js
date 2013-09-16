@@ -222,11 +222,11 @@ bb.age_verify = (function() {
   var age_verified_check = 'aug20a';
 
   function init() {
-    console.log('initing the age verification');
+   // console.log('initing the age verification');
 
     $('#ageModal a').click(function(e) {
       e.preventDefault();
-      console.log('CLICKY', $(this).html());
+      //console.log('CLICKY', $(this).html());
       if ($(this).html().toLowerCase() == 'yes') {
         age_verified();
       }
@@ -267,6 +267,7 @@ bb.age_verify = (function() {
       }
     );
     $('.reveal-modal-bg').css('background-color','#000');
+    _gaq.push(['_trackPageview', '/?verify']);
   }
 
   return {

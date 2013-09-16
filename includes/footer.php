@@ -22,7 +22,7 @@
 
 
   <div id="ageModal" class="reveal-modal small">
-    <img src="img/bb-logo.png" alt="Bitters+Bottles" />
+    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
     <h3 style="font-weight:300;">Are you over 21 years of age?</h3>
     <a href="#" class="button">Yes</a>
     <a href="#" class="button">No</a>
