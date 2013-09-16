@@ -33,6 +33,11 @@
 				  </section>
 				</nav>		
 			</div>
-			<hr />
+
+			<p style="margin:0 0 10px 0;padding:5px;border-bottom:1px solid #ccc;"><small>
+				Everything you need to mix new classic cocktails or discover new sipping spirits. 
+				Delivered to you every month.
+			</small></p>
+
 		</div>
 	</div>
