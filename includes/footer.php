@@ -29,7 +29,7 @@
 
   </div>
   <div id="subModal" class="reveal-modal medium">
-    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
+    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" style="width:97%"/>
     <?php include "mailchimp-form.php"; ?>
     <p class="right" style="font-size:12px;">
         <a class="close-sub" href="#">No thanks.</a>
