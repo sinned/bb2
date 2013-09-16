@@ -221,11 +221,11 @@
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-2">
 							<li>
-								<span data-tooltip class="hastip" title='<?php echo $starterkit_hover; ?>'>	
+								<span data-tooltip data-options="disable-for-touch:true" class="hastip" title='<?php echo $starterkit_hover; ?>'>	
 									<a id='substart_yes' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=yes&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='yes' ? 'picked' : ''; ?>">I need <?php echo $starterkit; ?>.</a></li>
 								</span>
 							<li>
-								<span data-tooltip class="hastip" title='<img src="<?php echo WEBROOT; ?>img/<?php echo $subtype == 'cocktails' ? "imogene" : "fletcher" ?>.png" />'>
+								<span data-tooltip data-options="disable-for-touch:true" class="hastip" title='<img src="<?php echo WEBROOT; ?>img/<?php echo $subtype == 'cocktails' ? "imogene" : "fletcher" ?>.png" />'>
 									<a id='substart_no' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=<?php echo $subduration; ?>&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=no&amp;shipto=<?php echo $shipto; ?>" class="choice4 medium secondary button expand <?php echo $substart=='no' ? 'picked' : ''; ?>">I don't need <?php echo $starterkit; ?>.</a>
 								</span>
 							</li>
