@@ -1,4 +1,7 @@
 // Global Foundation Settings
+.red {
+	color: #bf1e2d;
+}
 @import "settings";
 p {
 	font-weight: 300;
@@ -19,6 +22,7 @@ ul.pluslist li {
 	background: url('../img/plus.png') no-repeat top left;
 	background-size: 10px 10px;
 	background-position: 0px 8px;
+	font-weight: bold;
 }
 
 h2 {
@@ -38,6 +42,10 @@ strong {
 
 .subscribe-top h1 {
 	text-transform: uppercase;
+}
+
+.subscribe-top h2 {
+	color: #bf1e2d;
 }
 
 .subscription-choices .picked, .subscription-choices .picked:focus {

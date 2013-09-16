@@ -1,3 +1,6 @@
+.red {
+  color: #bf1e2d; }
+
 p {
   font-weight: 300; }
 
@@ -15,7 +18,8 @@ ul.pluslist li {
   padding-left: 15px;
   background: url("../img/plus.png") no-repeat top left;
   background-size: 10px 10px;
-  background-position: 0px 8px; }
+  background-position: 0px 8px;
+  font-weight: bold; }
 
 h2 {
   font-family: 'Antic Slab', Times, serif;
@@ -31,6 +35,9 @@ strong {
 
 .subscribe-top h1 {
   text-transform: uppercase; }
+
+.subscribe-top h2 {
+  color: #bf1e2d; }
 
 .subscription-choices .picked, .subscription-choices .picked:focus {
   background: #336600;
