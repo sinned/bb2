@@ -32,7 +32,7 @@
 		&nbsp;
 	</div>
 	<div class="row">
-		<div class="large-offset-1 large-10 column text-center">
+		<div class="large-offset-1 large-10 column text-justify">
 			<p>
 				Through our subscription service, Bitters + Bottles builds the bar you need, while introducing you to new spirits and cocktails each month. 
 				Each delivery builds on the previous shipments to create the complete home bar. 
