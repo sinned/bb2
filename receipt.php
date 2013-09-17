@@ -15,7 +15,7 @@ switch ($_SERVER['SERVER_NAME']) {
 
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Bitters+Bottles</title>
+  <title>Receipt: Bitters + Bottles</title>
 	<link rel="stylesheet" href="https://bittersandbottles.foxycart.com/themes/standard/styles.css" type="text/css" media="screen" charset="utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Abel|Antic+Slab' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo WEBROOT; ?>stylesheets/normalize.css" />
