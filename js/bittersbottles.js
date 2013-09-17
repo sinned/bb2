@@ -11,7 +11,8 @@ bb.subscription = (function() {
     var rightheight = Math.ceil(leftheight / 192) * 192 ;
     $("#subscription-right").height(rightheight);
 
-    $('.show-subscription-choices button').click(function(e) { 
+    $('.show-subscription-choices-button').click(function(e) { 
+      e.preventDefault();
       $('.subscription-choices').show('fast', function () {
           // set the right column to the same height as the left
           var leftheight = $("#subscription-left").height();

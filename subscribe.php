@@ -17,6 +17,9 @@
 		return $valid_subscription;
 	}
 
+	// show subscription choices
+	$show_subscribe = isset($_REQUEST['subscribe']);
+
 	// choices picked for the subscription options...
 	$subtype       = !empty($_REQUEST['subtype']) ? strtolower($_REQUEST['subtype']) : ''; // subscription type
 	$subfor       = !empty($_REQUEST['subfor']) ? strtolower($_REQUEST['subfor']) : ''; // who this subscription is for
@@ -156,15 +159,17 @@
 				</div>
 			</div>
 
+			<?php if (!$show_subscribe) {  ?>
 			<div class="show-subscription-choices">
 				<div class="row">
 					<div class="large-12 small=12 column text-center">
-						<button class="button success">Get Started Now.</button>
+						<a href="<?php echo WEBROOT; ?><?php echo $subtype; ?>/?subscribe" class="show-subscription-choices-button button success">Get Started Now.</a>
 					</div>
 				</div>
 			</div>
+			<?php } ?>
 
-			<div class="subscription-choices hide">
+			<div class="subscription-choices <?php echo $show_subscribe ? '' : 'hide' ?>">
 				<div class="row">
 					<div class="large-12 column text-center" />
 						<h3>Please make your selections:</h3>
