@@ -28,6 +28,10 @@
 	$subduration       = !empty($_REQUEST['subduration']) ? strtolower($_REQUEST['subduration']) : ''; // how long to subscribe for
 	$substart       = !empty($_REQUEST['substart']) ? strtolower($_REQUEST['substart']) : ''; // starter or not
 
+	if ($subfor || $shipto || $subfreq || $subduration || $substart) {
+		$show_subscribe = true;
+	}
+
 	// init
 	$price_per_month = 0;
 	$foxy_price = '';
