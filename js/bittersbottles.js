@@ -229,7 +229,10 @@ bb.age_verify = (function() {
       e.preventDefault();
       //console.log('CLICKY', $(this).html());
       if ($(this).html().toLowerCase() == 'yes') {
+        _gaq.push(['_trackEvent', 'Age Verification', 'Yes', age_verified_check]);
         age_verified();
+      } else {
+        _gaq.push(['_trackEvent', 'Age Verification', 'No', age_verified_check]);
       }
     });
 
