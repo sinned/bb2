@@ -232,6 +232,7 @@ bb.age_verify = (function() {
         _gaq.push(['_trackEvent', 'Age Verification', 'Yes', age_verified_check]);
         age_verified();
       } else {
+        window.location.assign("http://www.caprisun.com/");
         _gaq.push(['_trackEvent', 'Age Verification', 'No', age_verified_check]);
       }
     });
