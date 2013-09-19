@@ -13,7 +13,7 @@
 	<?php include "includes/header.php"; ?>
 	<div class="row">
 		<div id="marquee" class="large-12 column">
-			<img src="img/your-home-bar-delivered.jpg" title="Your Home Bar, Delivered" alt="Your Home Bar, Delivered" />
+			<img src="img/delivered-monthly.jpg" title="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly." alt="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly" />
 			<p class="right"><small>Now serving California <span class="bbplus">+</span> New York.</small></p>
 		</div>
 	</div>
@@ -31,15 +31,7 @@
 	<div class="row">
 		&nbsp;
 	</div>
-	<div class="row">
-		<div class="large-12 column text-justify">
-			<p>
-				Through our subscription service, Bitters + Bottles builds the bar you need, while introducing you to new spirits and cocktails each month. 
-				Each delivery builds on the previous shipments to create the complete home bar. 
-				All bottles are full sized, no mini bar here.
-			</p>
-		</div>
-	</div>
+	
 
 	<?php include "includes/footer.php"; ?>
 </body>
