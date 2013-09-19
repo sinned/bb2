@@ -34,9 +34,7 @@
 				</nav>		
 			</div>
 
-			<p style="margin:0 0 10px 0;padding:5px;border-bottom:1px solid #ccc;"><small>
-				We send everything you need to mix new classic cocktails or discover rare sipping spirits. Every month.
-			</small></p>
+			<p style="margin:0 0 10px 0;padding:5px;border-bottom:1px solid #ccc;"></p>
 
 		</div>
 	</div>
