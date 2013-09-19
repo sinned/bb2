@@ -63,6 +63,14 @@ switch ($_SERVER['SERVER_NAME']) {
 
 	<div class="row">
 		<div class="large-12 column">
+			<p>Thank you for your purchase.  
+				<br />
+				A confirmation has been sent to your email. If you have any questions please feel free to email info@bittersandbottles.com  </p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 column">
 			^^cart^^
 			^^receipt^^	
 		</div>
