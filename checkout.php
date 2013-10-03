@@ -66,13 +66,14 @@ switch ($_SERVER['SERVER_NAME']) {
 </script>
 
 <script type="text/javascript" charset="utf-8">
+	// restricting shipping logic, docs here: http://wiki.foxycart.com/snippets/shipping/restricting_countries_and_states_on_the_checkout
 	//<![CDATA[
 	jQuery(document).ready(function() {
  
 		/* BEGIN CUSTOM LOCATION LOGIC */
  
 		FC.locations.limitCountriesTo("US", "shipping");
-		FC.locations.limitStatesTo("US", ["CA","NY"]);
+		FC.locations.limitStatesTo("US", ["CA","NY"], "shipping");
 		FC.checkout.requireShippingAddress();
  
 		/* END CUSTOM LOCATION LOGIC */
