@@ -129,33 +129,40 @@
 				<div class="large-12 column subscribe-top">
 					<h1 style="font-weight:300;"><?php echo $product_title; ?></h1>
 						<?php if ($subtype == 'cocktails') { ?>
-							<h2>Making drinks isn’t about mixology. It’s about hospitality.</h2> 
-							<h2>Time to invite some friends over.</h2>
+							<h2>A cocktail is so much more than the sum of its parts.</h2> 
 							<p>
-								The perfect drink is well-balanced and simple, made from fine ingredients. 
-								We’ve gone to the trouble of putting it all in a box for you.  
+								Setting up your home bar is a journey. Over the course of our cocktail subscription, we take you through 60 classic and noteworthy recipes and set you up with a kick ass home bar.  Building on previous shipments, each delivery adds new bottles to your bar (primarily 750 ml) and 5 new recipes to your repertoire.
 							</p>
 							<p>
-								And by &ldquo;it all&rdquo; we mean:
+								The vitals:
 							</p>
-								<ul class="pluslist">
-									<li>full sized bottles of spirits</li>
-									<li>recipes for several cocktails</li>
-									<li>and the history of what makes those cocktails just so damned timeless.</li>
-								</ul>
+							<ul class="pluslist">
+								<li>Full size spirits delivered to your door</li>
+								<li>5 cocktail recipes every month</li>
+								<li>Only top quality spirits:  all the essentials, but never boring</li>
+								<li>We provide the know-how, you mix and enjoy</li>
+							</ul>
 
 							<p>
-								Each delivery complements the previous one to create the complete home bar.  It’s nothing too complicated, just all the elements you need to craft new classic cocktails each month.
+								Ready to build the perfect cocktail bar?
 							</p>
 						<?php } else { ?>
-							<h2>What do we say when we discover a rare spirit?</h2>
-							<h2>Neat.</h2>
+							<h2>We do the legwork, you just sit back and sip. Neat.</h2>
 							<p>
-									Each month, let us send you a full sized bottle of something you may not have seen before.
-								<br />Something to sip and savor. 
-								<br />Whether it’s from grain, agave, or sugarcane, we work hard to bring you something new.
-								<br />Let our spirits be your guide.
+								Spirits aren&rsquo;t made in a day, neither is your home bar.  Whether it is from grain, agave, or sugarcane, we track down the rare, the new, and the most exciting spirits from the best distillers around the world.  Each month you will receive one or more bottles for sipping that are as delicious as they are unique.  We will also be sure to tell you exactly why each bottle deserves a spot in your home bar.
 							</p>
+							<p>
+								The vitals:
+							</p>
+							<ul class="pluslist">
+								<li>One or more sipping spirits delivered to your door monthly</li>
+								<li>Only curated quality spirits worthy of a spot in your home bar</li>
+								<li>We provide the spirit, you decide neat or on the rocks, and enjoy</li>
+							</ul>
+							<p>
+								Ready to build the most interesting bar in the world?
+							</p>
+							
 						<?php } ?>
 						<hr />
 						<h4>$<?php echo $price_per_month; ?> / month</h4>
@@ -167,7 +174,7 @@
 			<div class="show-subscription-choices">
 				<div class="row">
 					<div class="large-12 small=12 column text-center">
-						<a href="<?php echo WEBROOT; ?><?php echo $subtype; ?>/?subscribe" class="show-subscription-choices-button button success">Get Started Now.</a>
+						<a href="<?php echo WEBROOT; ?><?php echo $subtype; ?>/?subscribe" class="show-subscription-choices-button button success">Sign Up Now.</a>
 					</div>
 				</div>
 			</div>

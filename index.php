@@ -13,8 +13,8 @@
 	<?php include "includes/header.php"; ?>
 	<div class="row">
 		<div id="marquee" class="large-12 column">
-			<img src="img/delivered-monthly.jpg" title="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly." alt="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly" />
-			<p class="right"><small>Now serving California <span class="bbplus">+</span> New York.</small></p>
+			<img src="img/build-the-perfect-home-bar.jpg" title="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly." alt="B + B delivers Classic cocktail ingredients and recipes, and rare spirits monthly" />
+			<p class="right"><small>Sign-up for monthly deliveries tailore to your style: master mixer or armchair sipper.</p>
 		</div>
 	</div>
 	<div class="row">
