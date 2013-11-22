@@ -54,7 +54,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 			$starterkit = "barware";
-			$starterkit_hover = " The essentials: 4 rocks glasses and whiskey stones";
+			$starterkit_hover = " The essentials: 2 rocks glasses and whiskey stones";
 		break;
 	}
 
