@@ -336,7 +336,7 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 </head>
 <body>
 
-	<?php include "includes/header.php"; ?>
+	<?php include "../includes/header.php"; ?>
 
 	<div class="row">
 		<div class="large-12 column">
@@ -349,6 +349,6 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 		</div>
 	</div>
 
-	<?php include "includes/footer.php"; ?>
+	<?php include "../includes/footer.php"; ?>
 </body>
 </html>
