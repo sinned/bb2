@@ -54,7 +54,7 @@
 			$product_name = $subfreq == 'monthly' ? "Monthly Spirits Subscription, $subduration months" : "Prepaid Spirits Subscription, $subduration months";
 			$price_per_month = 75;
 			$starterkit = "barware";
-			$starterkit_hover = " The essentials: 4 rocks glasses and whiskey stones";
+			$starterkit_hover = " The essentials: 2 rocks glasses and whiskey stones";
 		break;
 	}
 
@@ -201,6 +201,8 @@
 						<div id='whofor' class='<?php echo $subfor=='gift' ? '' : 'hide'; ?>'>
 							<h5>What is the name of the recipient?</h5>
 							<input type="text" value='' placeholder='Lucky Recipient&rsquo;s Name' />
+							<h5>Leave a gift message</h5>
+							<textarea name="giftmessage"></textarea>
 						</div>
 					</div>
 				</div>
@@ -223,10 +225,10 @@
 					</div>
 					<div class="large-11 small-12 column">
 						<ul class="small-block-grid-4 months">
+							<li><a id='subduration_1' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='1' ? 'picked' : ''; ?>">1 Month</a></li>
 							<li><a id='subduration_3' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=3&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='3' ? 'picked' : ''; ?>">3 Months</a></li>
 							<li><a id='subduration_6' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=6&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='6' ? 'picked' : ''; ?>">6 Months</a></li>
 							<li><a id='subduration_12' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=12&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='12' ? 'picked' : ''; ?>">12 Months</a></li>
-							<li><a id='subduration_inf' href="<?php echo WEBROOT; ?>subscribe.php?subtype=<?php echo $subtype; ?>&amp;subfor=<?php echo $subfor; ?>&amp;subduration=inf&amp;subfreq=<?php echo $subfreq; ?>&amp;substart=<?php echo $substart; ?>&amp;shipto=<?php echo $shipto; ?>" class="choice3 medium secondary button expand <?php echo $subduration=='inf' ? 'picked' : ''; ?> <?php echo $subfreq=='once' ? 'disabled' : ''; ?>">∞</a></li>
 						</ul>
 					</div>
 				</div>
@@ -296,6 +298,7 @@
 						<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
 						<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
 						<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
+						<input type="hidden" name="Gift_Message" value="" />
 						<!-- <input type="hidden" name="empty" value="true" /> -->
 						</form>				
 						<a id="subscribe-process" href="#" class='button large expand'>Add to Cart</a>

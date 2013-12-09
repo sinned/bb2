@@ -59,7 +59,7 @@ switch ($_SERVER['SERVER_NAME']) {
 </head>
 <body>
 
-	<?php include "includes/header.php"; ?>
+	<?php include "../includes/header.php"; ?>
 
 	<div class="row">
 		<div class="large-12 column">
@@ -76,6 +76,6 @@ switch ($_SERVER['SERVER_NAME']) {
 		</div>
 	</div>
 
-	<?php include "includes/footer.php"; ?>
+	<?php include "../includes/footer.php"; ?>
 </body>
 </html>

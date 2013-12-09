@@ -114,6 +114,11 @@ bb.subscription = (function() {
 
     product_code += subscription_type.toUpperCase(); // start the product code
 
+    if ($('a#subduration_1').hasClass('picked')) {
+      $('a#subfreq_once').addClass('picked');
+      $('a#subfreq_monthly').removeClass('picked');
+    } 
+
     if ($('a#subfreq_once').hasClass('picked')) {
       product_code += '-ONCE';
       if ($('a#subduration_3').hasClass('picked')) {
@@ -122,6 +127,8 @@ bb.subscription = (function() {
         months_paid = 6;
       } else if ($('a#subduration_12').hasClass('picked')) {
         months_paid = 12;
+      } else if ($('a#subduration_1').hasClass('picked')) {
+        months_paid = 1;
       }
 
       total_price = price_per_month * months_paid;
@@ -176,15 +183,20 @@ bb.subscription = (function() {
   function process() {
       //console.log('Processing order...');
       var whofor = '';
+      var giftmessage = '';
       
       // validate that all selections have been made
 
       if ($('.choice1').hasClass('picked') && $('.choice2').hasClass('picked') && $('.choice3').hasClass('picked') && $('.choice4').hasClass('picked')) {
         if ($('a#subfor_gift').hasClass('picked')) {
           whofor = $('#whofor input').val();
+          giftmessage = $('#whofor textarea').val();
           $('form#buy-subscription [name=shipto]').val(whofor);   
+          $('form#buy-subscription [name=Gift_Message]').val(giftmessage);   
+
         } else {
-          $('form#buy-subscription [name=shipto]').val('');           
+          $('form#buy-subscription [name=shipto]').val('');  
+          $('form#buy-subscription [name=Gift_Message]').val('');   
         }
 
         // add the starter kit if it's selected.
@@ -205,6 +217,15 @@ bb.subscription = (function() {
 
         // submit the form
         $('form#buy-subscription').submit(); 
+
+        //reset the form
+        $('.picked').removeClass('picked');
+        $('#whofor').hide();
+        $('#whofor input').val('');
+        $('#whofor textarea').val('');
+        $('form#buy-subscription [name=shipto]').val('');  
+        $('form#buy-subscription [name=Gift_Message]').val('');   
+
       } else {
         //alert('Before we add your subscription to the cart, please make all selections.');
         $('#myModal').html('Before we add your subscription to the cart, please make all selections.<a class="close-reveal-modal">&#215;</a>');
