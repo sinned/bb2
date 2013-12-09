@@ -70,19 +70,20 @@
 			// figure out subscription start
 			$today = strtotime("now");
 
-			// if it's after the 10th, then start it next month.
+			// if it's after the 16th, then start it next month.
+			$dayofmonth_to_startsub = 16;
 			$dayofmonth_today = date('j', $today);
-			if ($dayofmonth_today > 10) {
+			if ($dayofmonth_today > $dayofmonth_to_startsub) {
 				$next_month = strtotime("now +1month");
-				$subscription_starttimestring = date("F ", $next_month) . date("10, Y", $today);
+				$subscription_starttimestring = date("F ", $next_month) . date($dayofmonth_to_startsub . ", Y", $today);
 			} else {
-				$subscription_starttimestring = date("F 10, Y", $today);
+				$subscription_starttimestring = date("F " . $dayofmonth_to_startsub . ", Y", $today);
 			}
 
 			$subscription_starttimestamp = strtotime($subscription_starttimestring);
 
 
-			$foxy_sub_startdate = '10';
+			$foxy_sub_startdate = $dayofmonth_to_startsub;
 			switch ($subduration) {
 				case '3':
 				case '6':
