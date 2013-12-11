@@ -1,3 +1,6 @@
+;(function ($, window, undefined) {
+  'use strict';
+
   var $doc = $(document),
       Modernizr = window.Modernizr;
 
@@ -38,3 +41,5 @@
       }, 0);
     });
   }
+
+})(jQuery, this);
