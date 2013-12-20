@@ -39,6 +39,15 @@
 	$foxy_sub_startdate = '';
 	$foxy_sub_enddate = '';
 
+	// figure out when the subscription starts
+	$dayofmonth_today = date('j', $today);
+    if ($dayofmonth_today > 10) {
+            $next_month = strtotime("now +1month");
+            $subscription_starttimestring = date("F ", $next_month) . date("10, Y", $today);
+    } else {
+            $subscription_starttimestring = date("F 10, Y", $today);
+    }
+
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
