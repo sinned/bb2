@@ -20,7 +20,7 @@
 		</div>
 	</div>
 
-
+<?php if (!isset($notcheckout)) { ?>
   <div id="ageModal" class="reveal-modal small">
     <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
     <h3 style="font-weight:300;">Are you over 21 years of age?</h3>
@@ -45,7 +45,6 @@
   </div>
   <div id="myModal" class="reveal-modal medium text-center"></div>
 
-<?php if (!isset($notcheckout)) { ?>
   <script src="<?php echo WEBROOT; ?>js/vendor/zepto.js"></script>
   <script type="text/javascript" charset="utf-8">
   fcc.events.cart.preprocess.add(function(e, arr) {
@@ -65,7 +64,7 @@
     return true;
   });
   </script>
-<?php } ?>
+<?php } // if notcheckout ?>
   <script src="<?php echo WEBROOT; ?>js/foundation.min.js"></script>
   
   <script>
