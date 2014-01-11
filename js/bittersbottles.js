@@ -85,10 +85,10 @@ bb.subscription = (function() {
 
   function calculate_enddate(sub_duration) {
     var enddate = new Date();
-    enddate.setMonth(enddate.getMonth() + sub_duration);
+    enddate.setMonth(enddate.getMonth() + sub_duration - 1); // end the subscription minus one month, plus one day 
 
     var enddate_string =enddate.getFullYear();
-    enddate_string += ("0" + String(enddate.getMonth())).slice(-2); // to make a 2 digit month string add a 0 and then slice the last 2 characters.
+    enddate_string += ("0" + String(enddate.getMonth()+1)).slice(-2); // to make a 2 digit month string add a 0 and then slice the last 2 characters.
     enddate_string += ("0" + String(enddate.getDate()+1)).slice(-2); // to make a 2 digit date string add a 0 and then slice the last 2 characters.
     return enddate_string;
   }
