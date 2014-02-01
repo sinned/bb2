@@ -39,6 +39,15 @@
 	$foxy_sub_startdate = '';
 	$foxy_sub_enddate = '';
 
+	// figure out when the subscription starts
+	$dayofmonth_today = date('j', $today);
+    if ($dayofmonth_today > 10) {
+            $next_month = strtotime("now +1month");
+            $subscription_starttimestring = date("F ", $next_month) . date("10, Y", $today);
+    } else {
+            $subscription_starttimestring = date("F 10, Y", $today);
+    }
+
 	switch ($subtype) {
 		case 'cocktails':
 			$product_title = "Cocktails";
@@ -67,31 +76,15 @@
 			$foxy_price = $price_per_month;
 			$foxy_subscription_frequency = '1m';
 
-			// figure out subscription start
-			$today = strtotime("now");
-
-			// if it's after the 16th, then start it next month.
-			$dayofmonth_to_startsub = 16;
-			$dayofmonth_today = date('j', $today);
-			if ($dayofmonth_today > $dayofmonth_to_startsub) {
-				$next_month = strtotime("now +1month");
-				$subscription_starttimestring = date("F ", $next_month) . date($dayofmonth_to_startsub . ", Y", $today);
-			} else {
-				$subscription_starttimestring = date("F " . $dayofmonth_to_startsub . ", Y", $today);
-			}
-
-			$subscription_starttimestamp = strtotime($subscription_starttimestring);
-
-
-			$foxy_sub_startdate = $dayofmonth_to_startsub;
+			// figure out subscription end date
 			switch ($subduration) {
 				case '3':
 				case '6':
 				case '9':
 				case '12':
 					$monthend = $subduration - 1; // subtract 1 from the months to get the right month to end in.
-					$subscription_endtimestamp = strtotime("$subscription_starttimestamp +$monthend months");
-					$foxy_sub_enddate = date('Ym16', $subscription_endtimestamp);
+					$subscription_endtimestamp = strtotime("today +$monthend months");
+					$foxy_sub_enddate = date('Ymd', $subscription_endtimestamp);
 				break;		
 				case 'inf':
 			}			
@@ -295,7 +288,7 @@
 						<input type="hidden" name="price" value="<?php echo $foxy_price; ?>" />
 						<input type="hidden" name="code" value="<?php echo $foxy_product_code; ?>" />
 						<input type="hidden" name="sub_frequency" value="<?php echo $foxy_subscription_frequency; ?>" />
-						<input type="hidden" name="sub_startdate" value="<?php echo $foxy_sub_startdate; ?>" />
+						<input type="hidden" name="sub_startdate" value="" />
 						<input type="hidden" name="sub_enddate" value="<?php echo $foxy_sub_enddate; ?>" />
 						<input type="hidden" name="shipto" value="<?php echo $foxy_shipto; ?>" />
 						<input type="hidden" name="Gift_Message" value="" />

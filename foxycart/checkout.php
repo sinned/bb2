@@ -81,9 +81,9 @@ switch ($_SERVER['SERVER_NAME']) {
 		FC.locations.updateFoxyComplete(true);
 
 		/* Change "Future Subscriptions" to "Charged Monthly */
-		$('.fc_future_subscriptions label').html('Charged as Shipped Monthly');
-		$('tr#fc_cart_foot_subscriptions td.fc_col1').html('Charged as Shipped Monthly');
-		$('tr#fc_cart_foot_total td.fc_col1').html('Today&rsquo;s Total <br />Subscriptions will be charged once we ship.)');
+		//$('.fc_future_subscriptions label').html('Charged as Shipped Monthly');
+		//$('tr#fc_cart_foot_subscriptions td.fc_col1').html('Charged as Shipped Monthly');
+		//$('tr#fc_cart_foot_total td.fc_col1').html('Today&rsquo;s Total <br />Subscriptions will be charged once we ship.)');
 
 		/* Business Shipping Recoemmendation */
 		$('#fc_shipto_0').before('<p style="margin:10px 0;"><i>We strongly recommend shipping to a business address.</i></p>')

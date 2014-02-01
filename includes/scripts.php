@@ -51,5 +51,5 @@ switch ($_SERVER['SERVER_NAME']) {
 <?php } ?>
 <!-- Bitters+Bottles Scripts -->
 <script src="<?php echo WEBROOT; ?>js/vendor/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo WEBROOT; ?>js/bittersbottles.js?cb=120913" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo WEBROOT; ?>js/bittersbottles.js?cb=121713" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo WEBROOT; ?>js/app.js" type="text/javascript" charset="utf-8"></script>
