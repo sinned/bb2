@@ -275,7 +275,7 @@
 					</div>
 					<div class="large-10 column price_description">
 						<p>
-							April 15th<?php //echo date('F', strtotime($subscription_starttimestring)); ?>
+							May 15th<?php //echo date('F', strtotime($subscription_starttimestring)); ?>
 						</p>
 					</div>
 				</div>				
