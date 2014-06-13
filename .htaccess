@@ -2,9 +2,9 @@
 RewriteEngine On
 RewriteRule cocktails/ subscribe.php?subtype=cocktails [QSA,L]
 RewriteRule spirits/ subscribe.php?subtype=spirits$1 [QSA,L]
-RewriteRule ^/terms/ /blog/terms/ [L]
-RewriteRule ^/privacy/ /blog/privacy/ [L]
-RewriteRule ^/about-us/ /blog/about-us/ [L]
-RewriteRule ^/faq/ /blog/faq/ [L]
-RewriteRule ^/contact/ /blog/contact/ [L]
+RewriteRule ^terms/ /blog/terms/ [L]
+RewriteRule ^privacy/ /blog/privacy/ [L]
+RewriteRule ^about-us/ /blog/about-us/ [L]
+RewriteRule ^faq/ /blog/faq/ [L]
+RewriteRule ^contact/ /blog/contact/ [L]
 </IfModule>
