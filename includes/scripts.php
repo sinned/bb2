@@ -1,7 +1,7 @@
 <?php
 switch ($_SERVER['SERVER_NAME']) {
 	case 'localhost':
-		define('WEBROOT', '/bb2/');
+		define('WEBROOT', '/');
 	break;
 	default:
 		define('WEBROOT', '/');
