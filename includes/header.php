@@ -5,7 +5,7 @@
 				  <ul class="title-area">
 				    <!-- Title Area -->
 				    <li class="name">
-				    	<h1><a href="<?php echo WEBROOT; ?>"><img width="375" style="width:375px" src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
+				    	<h1><a href="<?php echo WEBROOT; ?>"><img width="375" style="width:375px" src="http://i.bittersandbottles.com/img/bb-logo.png" alt="Bitters+Bottles" title="Bitters+Bottles" /></a></h1>
 				    </li>
 				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>

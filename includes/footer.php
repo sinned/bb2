@@ -13,7 +13,7 @@
         </li>
         <li class="right">
           <a href="http://instagram.com/bittersandbottles/">
-            <img src="<?php echo WEBROOT; ?>img/instagram.png" alt="Follow @BittersAndBottles on Instagram" title="Follow @BittersAndBottles on Instagram" />
+            <img src="http://i.bittersandbottles.com/img/instagram.png" alt="Follow @BittersAndBottles on Instagram" title="Follow @BittersAndBottles on Instagram" />
           </a>          
         </li>
       <ul>
@@ -22,14 +22,14 @@
 
 <?php if (!isset($notcheckout)) { ?>
   <div id="ageModal" class="reveal-modal small">
-    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" />
+    <img src="http://i.bittersandbottles.com/img/bb-logo.png" alt="Bitters+Bottles" />
     <h3 style="font-weight:300;">Are you over 21 years of age?</h3>
     <a href="#" class="button">Yes</a>
     <a href="#" class="button">No</a>
 
   </div>
   <div id="subModal" class="reveal-modal small">
-    <img src="<?php echo WEBROOT; ?>img/bb-logo.png" alt="Bitters+Bottles" style="width:97%"/>
+    <img src="http://i.bittersandbottles.com/img/bb-logo.png" alt="Bitters+Bottles" style="width:97%"/>
     <?php include "mailchimp-form.php"; ?>
     <p class="right" style="font-size:12px;">
         <a class="close-sub" href="#">No thanks.</a>
