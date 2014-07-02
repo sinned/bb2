@@ -16,7 +16,7 @@ ul.pluslist {
 
 ul.pluslist li {
   padding-left: 15px;
-  background: url("../img/plus.png") no-repeat top left;
+  background: url("http://i.bittersandbottle.com/img/plus.png") no-repeat top left;
   background-size: 10px 10px;
   background-position: 0px 8px;
   font-weight: bold; }
@@ -84,10 +84,10 @@ h4.has-tip {
   text-transform: uppercase; }
 
 .sidebar-cocktails {
-  background: url("../img/cocktails-sidebar.jpg?cb=1") top right repeat-y; }
+  background: url("http://i.bittersandbottles.com/img/cocktails-sidebar.jpg?cb=1") top right repeat-y; }
 
 .sidebar-spirits {
-  background: url("../img/spirits-sidebar.jpg?cb=1") top right repeat-y; }
+  background: url("http://i.bittersandbottles.com/img/spirits-sidebar.jpg?cb=1") top right repeat-y; }
 
 .opaque {
   background: #000;
@@ -119,20 +119,16 @@ h4.has-tip {
   min-height: 200px;
   text-align: center; }
 
-  @media screen {
+@media screen {
   div#preloader {
     position: absolute;
     left: -9999px;
-    top:  -9999px;
-    }
+    top: -9999px; }
+
   div#preloader img {
-    display: block;
-    }
-  }
+    display: block; } }
 @media print {
-  div#preloader, 
+  div#preloader,
   div#preloader img {
     visibility: hidden;
-    display: none;
-    }
-  }
+    display: none; } }
