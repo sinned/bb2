@@ -33,7 +33,10 @@
 	<div class="row">
 		&nbsp;
 	</div>
-	
+	<div id="preloader">
+		<img src="img/cocktails-promo-hover.jpg" alt="Mix Cocktails" />
+		<img src="img/spirits-promo-hover.jpg" alt="Discover Cocktails" />
+	</div>
 
 	<?php include "includes/footer.php"; ?>
 </body>
