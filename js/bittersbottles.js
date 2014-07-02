@@ -3,7 +3,7 @@ var bb = {};
 
 bb.subscription = (function() {
   function init() {
-    console.log('initing subscription form', price_per_month);
+    //console.log('initing subscription form', price_per_month);
 
     // set the right column to the same height as the left
     var leftheight = $("#subscription-left").height();
@@ -265,7 +265,7 @@ bb.age_verify = (function() {
   }
 
   function verify() {
-    console.log('Reading age cookie', $.cookie('age_verified'));
+    //console.log('Reading age cookie', $.cookie('age_verified'));
     if ($.cookie('age_verified') != age_verified_check || document.location.search == '?verify') {
       showmodal();
     }
@@ -293,7 +293,7 @@ bb.age_verify = (function() {
 bb.mailinglist = (function() {
 
   function init () {
-    console.log('init mailinglist stuff');
+    //console.log('init mailinglist stuff');
     $('.close-sub').click(function (e) {
       e.preventDefault();
       $('.reveal-modal').foundation('reveal', 'close');

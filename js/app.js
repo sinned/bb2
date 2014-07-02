@@ -20,7 +20,7 @@
     $.fn.placeholder                ? $('input, textarea').placeholder() : null;
 
     // Begin Custom B+B Javascript.
-    console.log('hello dennis');
+    //console.log('hello dennis');
     bb.age_verify.init();
     bb.mailinglist.init();
     bb.cards.init();
