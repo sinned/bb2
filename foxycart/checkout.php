@@ -73,7 +73,7 @@ switch ($_SERVER['SERVER_NAME']) {
 		/* BEGIN CUSTOM LOCATION LOGIC */
  
 		FC.locations.limitCountriesTo("US", "shipping");
-		FC.locations.limitStatesTo("US", ["CA","NY"], "shipping");
+		FC.locations.limitStatesTo("US", ["CA","CO","WA","NY","NJ","IL","MO", "ID", "NM","DC","NY"], "shipping");
 		FC.checkout.requireShippingAddress();
  
 		/* END CUSTOM LOCATION LOGIC */
